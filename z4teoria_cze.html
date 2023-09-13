@@ -2,6 +2,12 @@
  <head>
  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <script language="JavaScript">
+function WinOpen()
+{
+window.open("obraz.html","okienko","toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=200");
+}
+</script>
  <title>Moja strona WWW</title>
  <script type="text/javascript">
  function onclickHandler()
@@ -13,5 +19,6 @@
  <body>
  <p onclick="onclickHandler();">Kliknij ten akapit,
  a pojawi się okno dialogowe.</p>
+ <input type="button" name="zadanie4" value="zadanie4-czerczon" onclick="WinOpen(' ')">
  </body>
 </html>
