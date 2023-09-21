@@ -1,0 +1,41 @@
+<html lang="pl-PL">
+<head>
+<title> Czerczon 2P</title>
+<script language="JavaScript">
+   function okno_zamknij_czerczon() 
+ {
+ window.close()
+ }
+</script>
+</head>
+<body>
+		<h1>1) Rodzaje okienek</h1>
+<ol>
+<li>Okienko alert – wyświetlająca okienko dialogowe z informacją i przyciskiem OK</li>
+<li>Okienko prompt – generująca okno, w którym użytkownik może wpisać wartość, zwracaną następnie do programu</li>
+<li>Okienko confirm służy do tego, aby użytkownik coś potwierdził (stąd nazwa confirm)</li>
+</ol>
+		<h1>2) Konwersji liczb</h1>
+<p>Wczytanie zmiennej z użyciem prompt wykonywane jest jako ciąg znaków dlatego konieczna jest konwersji z ciągu znaków na wartości liczbowe aby wykonywac obliczenia.</p>
+		<h1>3) Przy nadawaniu nazw zmiennym należy przestrzegać pewnych zasad: (trzy zasady)</h1>
+<ol>
+<li>parseFloat(zmienna) - konwersja zmiennej do typu float</li>
+<li>parseInt(zmienna) - konwersja zmiennej do typu int (liczbowego)</li>
+<li>toString(zmienna) - konwersja zmiennej do typu łańcuchowego</li>
+</ol>
+		<h1>4)Omów typy zmiennych w Javascript</h1>
+<p>W JavaScript nie ma możliwości definiowania różnych typów zmiennych tak jak w C++, typy zmiennych są definiowane w trakcie ich przypisywania.
+Podstawowe zmienne liczbowe w JavaScript to:</p>
+<p> Number -> Typ liczbowy </p>
+<ol>
+<li>zmienna całkowite</li>
+<li>zmiennoprzecinkowe</li>
+</ol>
+<p>String -> Typ tekstowy</p>
+<p>Boolea -> Typ logiczny</p>
+<p>Null -> Pusta zawartość</p>
+<p>Undefined -> Typ niezidentyfikowany</p>
+<p>Object -> Obiekt</p>
+ <input type="button" value="zamknij okno" onclick="okno_zamknij_czerczon()"/>
+</body>
+</html>
