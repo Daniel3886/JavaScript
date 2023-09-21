@@ -1,5 +1,19 @@
 <html lang="pl-PL">
 <head>
+<style>
+h1{
+  color: red;
+  text-align: center;
+ }
+ .button-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  gap: 5px;
+}
+ }
+</style>
 <title> Czerczon 2P</title>
 <script language="JavaScript">
   function WinOpen_czerczon1() 
@@ -25,12 +39,17 @@
 </script>
 </head>
 <body>
+<h1>Wykonal: Daniel Czerczon moj numer w dzinniku 8, czyli mam uklad [(8) mod 4=0] uklad 3 <h1>
 <form>
-	<input type="button" name="przycisk" value=" grafika 1" onclick="WinOpen_czerczon1()">
+<div class="button-container" >
+	<input type="button" name="przycisk" value="grafika 1" onclick="WinOpen_czerczon1()">
 	<input type="button" name="przycisk" value="grafika 2" onclick="WinOpen_czerczon2()">
-	<input type="button" name="przycisk" value=" grafika 3" onclick="WinOpen_czerczon3()">
-	<input type="button" name="przycisk" value=" grafika 4" onclick="WinOpen_czerczon4()">
+	<input type="button" name="przycisk" value="grafika 3" onclick="WinOpen_czerczon3()">
+	<input type="button" name="przycisk" value="grafika 4" onclick="WinOpen_czerczon4()">
+	</div> <br><br><br><br><br><br>
+	<div class="button-container" >
   <input type="button" value="zamknij okno" onclick="okno_zamknij_czerczon5()"/>
+  </div>
 </form>
 </body>
 </html>
