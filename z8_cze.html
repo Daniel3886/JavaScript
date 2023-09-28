@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+<script type="text/javascript">
+function show_confirm()
+{
+var r=confirm("Naciśnij klawisz");
+if (r==true)
+{
+ document.write("Nacisnąłeś OK! <br><br>");
+ document.write('<input type="button" value="zamknij okno" onclick="okno_zamknij_czerczon()"/>');
+ }
+else
+{ 
+document.write("Nacisnąłeś Cancel! <br><br>");
+document.write('<input type="button" value="zamknij okno" onclick="okno_zamknij_czerczon()"/>');
+ }
+}
+function okno_zamknij_czerczon()
+{
+ window.close()
+}
+</script>
+</head>
+<body>
+<h3>Zastosowanie:</h3>
+<p>Jest używany, jeśli chcemy zapytać użytkownika o weryfikacje, lub akceptację jakichś danych.<br> Użytkownik musi nacisnąć „OK.” w celu akceptacji bądź „Cancel” w celu odrzucenia. <br> Jeżeli zostanie wybrane „OK.” metoda zwraca true w przeciwnym wypadku false.</p>
+<input type="button" onclick="show_confirm()" value="Pokaż confirm box" />
+<input type="button" value="zamknij okno" onclick="okno_zamknij_czerczon()"/>
+</body>
+</html>
