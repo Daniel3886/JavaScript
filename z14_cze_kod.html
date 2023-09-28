@@ -1,0 +1,55 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html">
+ <style>
+ textarea {
+    width: 90%;
+    height: 90%;
+    resize: none;
+ }
+ </style>
+
+ <script type="text/javascript">
+ function okno_zamknij_czerczonkod() 
+ {
+ window.close()
+ }
+ </script>
+ </head>
+<body bgcolor="silver">
+ <textarea disabled readonly>
+<html> 
+ <head> 
+ <script type="text/javascript"> 
+  function okno_zamknij_czerczon() 
+ {
+ window.close()
+ }
+ </script> 
+ </head> 
+<body> 
+ <script language="JavaScript">
+var m_cze=prompt("m=","");
+
+var dodawanie;
+var dodawanie2;
+var mnozenie;
+var mnozenie2;
+var a=parseFloat(m_cze);
+
+if(m_cze !==null){
+	dodawanie= a;
+	dodawanie2= a + 2;
+	mnozenie = (a + 1) * (a + 2);
+	mnozenie2 = a * (a + 1);
+	}
+	
+	document.write("m=" +a+ "<br> 1/" +dodawanie+ "=" + "1/" +dodawanie2+ "+" + "1/" +mnozenie+ "+" + "1/" +mnozenie2+  "<br>");
+</script>
+ <input type="button" value="zamknij okno" onclick="okno_zamknij_czerczon()"/>
+</body> 
+</html>
+ </textarea>
+  <input type="button" value="zamknij okno" onclick="okno_zamknij_czerczonkod()"/>
+</body>
+</html>
