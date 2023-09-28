@@ -10,7 +10,7 @@
  </style>
 
  <script type="text/javascript">
- function okno_zamknij_czerczon8_1() 
+ function okno_zamknij_czerczon() 
  {
  window.close()
  }
@@ -21,7 +21,7 @@
  <html> 
  <head> 
  <script type="text/javascript"> 
-  function okno_zamknij_czerczon8() 
+  function okno_zamknij_czerczon() 
  {
  window.close()
  }
@@ -30,6 +30,10 @@
 <body> 
 <div style="color:green;font-size:37px;">
  <script language="JavaScript">
+    function WinOpen_czerczon11() 
+ {
+ window.open("z11_cze_kod.html","problem","toolbar=no,directories=no,menubar=no,height=400,width=400,top=450,left=300");
+ }
 var D1_cze=prompt("D1=","");
 var D2_cze=prompt("D2=","");
 var roznica;
@@ -48,7 +52,7 @@ var b=parseFloat(D2_cze);
  document.write("D1="+a+" <br> "+" D2= "+b+" <br> "+" ilosc sekund= " +roznica+ " sekund" + "<br>");
  </script>
 </div>
- <input type="button" value="zamknij okno" onclick="okno_zamknij_czerczon8()"/>
+  <input type="button" name="kod" value="zad 11 kod" onclick="WinOpen_czerczon11()">
 </body> 
 </html>
  </textarea>
