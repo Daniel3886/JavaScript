@@ -10,7 +10,7 @@
  </style>
 
  <script type="text/javascript">
- function okno_zamknij_czerczon9kod() 
+ function okno_zamknij_czerczonkod() 
  {
  window.close()
  }
@@ -21,7 +21,7 @@
 <html> 
  <head> 
  <script type="text/javascript"> 
-  function okno_zamknij_czerczon9() 
+  function okno_zamknij_czerczon() 
  {
  window.close()
  }
@@ -30,6 +30,10 @@
 <body> 
 <div style="color:green;font-size:37px;">
  <script language="JavaScript">
+  function WinOpen_czerczon12() 
+ {
+ window.open("z12_cze_kod.html","problem","toolbar=no,directories=no,menubar=no,height=400,width=400,top=450,left=300");
+ }
 var D1_cze=prompt("D1=","");
 var G1_cze=prompt("G1=","");
 var D2_cze=prompt("D2=","");
@@ -67,10 +71,11 @@ var d=parseFloat(G2_cze);
  document.write("D1="+a+" <br> "+" G1="+b+ "<br>" + "D2=" +c+" <br>" +" G2= "+d+" <br> "+" ilosc sekund= " +roznican+ " sekund" + "<br>");
  </script>
 </div>
- <input type="button" value="zamknij okno" onclick="okno_zamknij_czerczon9()"/>
+ <input type="button" value="zamknij okno" onclick="okno_zamknij_czerczon()"/>
+  <input type="button" name="kod" value="zad 12 kod" onclick="WinOpen_czerczon12()">
 </body> 
 </html>
  </textarea>
-  <input type="button" value="zamknij okno" onclick="okno_zamknij_czerczon9kod()"/>
+  <input type="button" value="zamknij okno" onclick="okno_zamknij_czerczonkod()"/>
 </body>
 </html>
