@@ -24,25 +24,11 @@ var a=parseFloat(D1_cze);
 var b=parseFloat(G1_cze);
 var c=parseFloat(D2_cze);
 var d=parseFloat(G2_cze);
-  if (D1_cze>=D2_cze) 
+  if (D1_cze>=D2_cze && G1_cze>=G2_cze) 
  { 
  roznicad=D1_cze-D2_cze;
  roznicad=roznicad*86400; 
- } 
-  if (D1_cze<=D2_cze) 
- { 
- roznicad=D1_cze-D2_cze;
- roznicad=roznicad*86400; 
- } 
-   
-  if (G1_cze<=G2_cze) 
- { 
- roznicag=G1_cze-G2_cze;
- roznicag=roznicag*3600; 
- } 
-   
-  if (G1_cze>=G2_cze) 
- { 
+ 
  roznicag=G1_cze-G2_cze;
  roznicag=roznicag*3600; 
  } 
@@ -52,7 +38,6 @@ var d=parseFloat(G2_cze);
  </script>
 </div>
  <input type="button" value="zamknij okno" onclick="okno_zamknij_czerczon()"/>
-  <input type="button" name="kod" value="zad 12 kod" onclick="WinOpen_czerczon12()">
-
+ <input type="button" name="kod" value="zad 12 kod" onclick="WinOpen_czerczon12()">
 </body> 
 </html>
