@@ -1,0 +1,33 @@
+<html>
+<head>
+<title> Użycie fukcji </title>
+<meta charset="utf-8">
+</head>
+<body>
+<div style="font-size:50px;">
+<script language="JavaScript">
+ function WinOpen_czerczon18()
+  {
+ window.open("z18_cze_kod.html","problem","toolbar=no,directories=no,menubar=no,height=400,width=400,top=450,left=300");
+ }
+ 
+ function okno_zamknij_czerczon() 
+ {
+ window.close()
+ }
+ 
+var a=parseFloat(prompt("podaj a=",""));
+var b=parseFloat(prompt("podaj b=",""));
+function suma_cze(a, b) {
+return a + b;
+}
+odejmowanie=a-b;
+mnozenie=a*b;
+kwadrat=a*a;
+document.write("podane dane:<br> a= " +a+ ", b= "+b+ "<br>suma=" +suma_cze(a,b)+ "<br>odejmowanie= " +odejmowanie+ "<br>mnozenie= " +mnozenie+ "<br> od kwadratu= " +kwadrat+ "<br>");
+</script>
+</div>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_czerczon()"/>
+<input type="button" name="kod" value="zad 18 kod" onclick="WinOpen_czerczon18()">
+</body>
+</html>
