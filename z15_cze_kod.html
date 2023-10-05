@@ -1,0 +1,71 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html">
+ <style>
+ textarea {
+    width: 90%;
+    height: 90%;
+    resize: none;
+ }
+ </style>
+
+ <script type="text/javascript">
+ function okno_zamknij_czerczonkod() 
+ {
+ window.close()
+ }
+ </script>
+ </head>
+<body bgcolor="silver">
+ <textarea disabled readonly>
+ <html> 
+ <head> 
+ <script type="text/javascript"> 
+  function okno_zamknij_czerczon() 
+ {
+ window.close()
+ }
+ </script> 
+ </head> 
+<body> 
+ <script language="JavaScript">
+  function WinOpen_czerczon15() 
+ {
+ window.open("z15_cze_kod.html","problem","toolbar=no,directories=no,menubar=no,height=400,width=400,top=450,left=300");
+ }
+var m_cze=prompt("m=","");
+var m2_cze=prompt("m=","");
+
+var dodawanie;
+var dodawanie2;
+var dodawanie3;
+
+var dodawanieb;
+var mnozenie;
+var mnozenie2;
+
+var a=parseFloat(m_cze);
+var b=parseFloat(m2_cze);
+
+if(m_cze !==null){
+	dodawanie= a;
+	dodawanie2= a + 3;
+	dodawanie3= a + 3;
+	}
+	
+	if(m2_cze !==null){
+	dodawanieb= b;
+	mnozenie = b * 2;
+	mnozenie2 = b * 2;
+	}
+	
+	document.write("m=" +a+ "<br>" + "<br> 1/" +dodawanie+ "=" + "1/" +dodawanie2+ "+" + "1/" +dodawanie3+ "<br>" + "<br>" +"m=" +b+ "<br>" + "<br> 1/" +dodawanieb+ "= 1/" +mnozenie+ "+" + "1/" +mnozenie2+ "<br>");
+</script>
+ <input type="button" value="zamknij okno" onclick="okno_zamknij_czerczon()"/>
+ <input type="button" name="kod" value="zad 15 kod" onclick="WinOpen_czerczon15()">
+</body> 
+</html>
+</textarea>
+  <input type="button" value="zamknij okno" onclick="okno_zamknij_czerczonkod()"/>
+</body>
+</html>
