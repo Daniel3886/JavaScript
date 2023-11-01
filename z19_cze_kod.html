@@ -1,0 +1,57 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html">
+ <style>
+ textarea {
+    width: 90%;
+    height: 90%;
+    resize: none;
+ }
+ </style>
+
+ <script type="text/javascript">
+ function okno_zamknij_czerczonkod() 
+ {
+ window.close()
+ }
+ </script>
+ </head>
+<body bgcolor="silver">
+ <textarea disabled readonly>
+ <html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styl.css">
+</head>
+<body>
+<script type="text/javascript">
+ function okno_zamknij_czerczon() 
+ {
+ window.close()
+ }
+ 
+function pole()
+{
+var a_cze = parseFloat(document.getElementById('dlugosc').value);
+var b_cze = a_cze*a_cze;
+document.getElementById("nazwa").innerHTML = "Pole kwadratu= "+b_cze.toFixed(2)+" cm^2";
+}
+function obwod()
+{
+var a_cze= parseFloat(document.getElementById('dlugosc').value);
+var b_cze= 4*a_cze;
+document.getElementById("nazwa").innerHTML = "Obwód kwadratu= "+b_cze.toFixed(2)+" cm";
+}
+</script>
+<h1>Wszystko o KWADRACIE</h1><br><br>
+Podaj długość boku: <input type="text" id="dlugosc" value="podaj długość"> cm<br><br><br>
+<input type="button" name="pole" value="Oblicz pole" Onclick="pole()"><br><br>
+<input type="button" name="obwod" value="Oblicz obwod" Onclick="obwod()"><br><br>
+<div style="color:red;font-size:50px;"id="nazwa"></div>
+ <input type="button" value="zamknij okno" onclick="okno_zamknij_czerczon()"/>
+</body>
+</html>
+  </textarea>
+  <input type="button" value="zamknij okno" onclick="okno_zamknij_czerczonkod()"/>
+</body>
+</html>

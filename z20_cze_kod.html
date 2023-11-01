@@ -1,0 +1,83 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html">
+ <style>
+ textarea {
+    width: 90%;
+    height: 90%;
+    resize: none;
+ }
+ </style>
+
+ <script type="text/javascript">
+ function okno_zamknij_czerczonkod() 
+ {
+ window.close()
+ }
+ </script>
+ </head>
+<body bgcolor="silver">
+ <textarea disabled readonly>
+ 
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styl.css">
+</head>
+<body>
+<script type="text/javascript">
+ function okno_zamknij_czerczon() 
+ {
+ window.close()
+ }
+ 
+
+    function AB_cze() {
+     let aX_cze = parseFloat(document.getElementById('aX').value);
+     let aY_cze = parseFloat(document.getElementById('aY').value);
+     let bX_cze = parseFloat(document.getElementById('bX').value);
+     let bY_cze = parseFloat(document.getElementById('bY').value);
+      document.getElementById("odpowiedz").innerHTML = "AB= "
+        + (Math.sqrt((aX_cze - bX_cze) ** 2 + (aY_cze - bY_cze) ** 2)).toFixed(2);
+    }
+
+  function BC_cze() {
+     let bX_cze = parseFloat(document.getElementById('bX').value);
+     let bY_cze = parseFloat(document.getElementById('bY').value);
+     let cX_cze = parseFloat(document.getElementById('cX').value);
+     let cY_cze = parseFloat(document.getElementById('cY').value);
+      document.getElementById("odpowiedz").innerHTML = "BC= "
+        + (Math.sqrt((bX_cze - cX_cze) ** 2 + (cY_cze - cY_cze) ** 2)).toFixed(2);
+    }
+
+function AC_cze() {
+     let aX_cze = parseFloat(document.getElementById('bX').value);
+     let aY_cze = parseFloat(document.getElementById('bY').value);
+     let cX_cze = parseFloat(document.getElementById('cX').value);
+     let cY_cze = parseFloat(document.getElementById('cY').value);
+      document.getElementById("odpowiedz").innerHTML = "AC= "
+        + (Math.sqrt((aX_cze - cX_cze) ** 2 + (aY_cze - cY_cze) ** 2)).toFixed(2);
+    }
+	
+
+</script>
+<h1>Wszystko o TROJKACIE</h1><br><br>
+  Podaj X punktu A: <input type="text" id="aX"><br>
+  Podaj Y punktu A: <input type="text" id="aY"><br>
+  Podaj X punktu B: <input type="text" id="bX"><br>
+  Podaj Y punktu B: <input type="text" id="bY"><br>
+  Podaj X punktu C: <input type="text" id="cX"><br>
+  Podaj Y punktu C: <input type="text" id="cY"><br>
+<input type="button" value="Oblicz AB" Onclick="AB_cze()"><br><br>
+<input type="button" value="Oblicz BC" Onclick="BC_cze()"><br><br>
+<input type="button" value="Oblicz AC" Onclick="AC_cze()"><br><br>
+
+<div style="color:red;font-size:50px;"id="odpowiedz"></div>
+ <input type="button" value="zamknij okno" onclick="okno_zamknij_czerczon()"/>
+</body>
+</html>
+
+  </textarea>
+  <input type="button" value="zamknij okno" onclick="okno_zamknij_czerczonkod()"/>
+</body>
+</html>

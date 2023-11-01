@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Przykład obliczenia V i Pc walca</title>
+<script language="JavaScript">
+function oblicz(d, x) {
+    d_liczba = parseFloat(d);
+    x_liczba = parseFloat(x);
+    V_wynik = d_liczba * d_liczba + x_liczba * x_liczba;
+    wynik = Math.sqrt(V_wynik);
+    document.getElementsByName('dlugosc')[0].value = wynik.toFixed(2);
+    
+    alfa = Math.atan(d_liczba / x_liczba) * (180 / Math.PI);
+    document.getElementsByName('alfa')[0].value = alfa.toFixed(2);
+}
+
+function okno_zamknij_czerczon() {
+    window.close();
+}
+</script>
+</head>
+<body>
+Obliczanie drabiny oraz kata alfa<br><br>
+<form name="formularz" onsubmit="oblicz(this.wysokosc.value, this.odleglosc.value); return false;">
+    Podaj d=<input size="6" name="wysokosc">
+    Podaj x=<input size="6" name="odleglosc"><br><br>
+    <input type="submit" value="Oblicz">
+    <br><br>
+    Drabina=<input size="6" name="dlugosc">
+    Alfa=<input size="6" name="alfa">
+</form>
+<input type="button" value="Zamknij okno" onclick="okno_zamknij_czerczon()">
+</body>
+</html>
