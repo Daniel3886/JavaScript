@@ -11,5 +11,23 @@ h1 {
     left: 18px;
     font-weight: bold;
     font-family: Arial;
-    text-shadow: rgb(0, 0, 0) 2px 2px 2px ;
+    text-shadow: rgb(0, 0, 0) 3px 3px 3px ;
 }
+   input{
+   margin: 4px;
+   background-color: salmon;
+   color: wine;
+   padding: 15px 13px;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 19px;
+    box-shadow: 0 9px #00000099;
+    height: 50px;
+    align-items: center;
+  }
+  .button:hover {background-color: #a7a1a8}
+  .button:active {
+    background-color:  maroon;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
