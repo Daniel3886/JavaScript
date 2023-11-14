@@ -1,0 +1,75 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html">
+ <style>
+ textarea {
+    width: 90%;
+    height: 90%;
+    resize: none;
+ }
+ </style>
+
+ <script type="text/javascript">
+ function okno_zamknij_czerczonkod() 
+ {
+ window.close()
+ }
+ </script>
+ </head>
+<body bgcolor="silver">
+ <textarea disabled readonly>
+   <html>
+      <head>
+          <meta charset="UTF-8">
+          <link rel="stylesheet" href="styl.css">
+      </head>
+      <body>
+          <script type="text/javascript">
+              function okno_zamknij_czerczon() {
+                  window.close();
+              }
+      
+              function oblicz(odl_kow, s_kow) {
+                  var odl_cze = parseFloat(odl_kow);
+                  var s_cze = parseFloat(s_kow);
+      
+                  
+                  var alfa = kat_cze(odl_cze, s_cze);
+      
+                 
+                  var h_kow = h_cze(odl_cze, s_cze);
+      
+                 
+                  document.getElementsByName('alfa')[0].value = alfa.toFixed(2);
+                  document.getElementsByName('dlugosc')[0].value = h_kow.toFixed(2);
+              }
+      
+              function kat_cze(odl_cze, s_cze) {
+                  var alfa = Math.atan(odl_cze / s_cze) * (180 / Math.PI);
+                  return alfa;
+              }
+      
+              function h_cze(odl_cze, s_cze) {
+                  var V_wynik = odl_cze * odl_cze + s_cze * s_cze;
+                  var wynik = Math.sqrt(V_wynik);
+                  return wynik;
+              }
+          </script>
+      
+          Obliczanie wysokości oraz kąta<br><br>
+          <form name="formularz" onsubmit="oblicz(this.odleglosc.value, this.droga.value); return false;">
+              Podaj odległość pomiędzy Arturem i Dawidem: <input size="6" id="odleglosc"><br><br>
+              Podaj drogę, na której samolot znajduje się pionowo nad Dawidem: <input size="6" id="droga"><br><br>
+              <input type="submit" value="Oblicz">
+              <br><br>
+              Samolot pod pewnym kątem od Artura: <input size="6" name="alfa">
+              Wysokość (h): <input size="6" name="dlugosc">
+          </form>
+          <input type="button" value="Zamknij okno" onclick="okno_zamknij_czerczon()">
+      </body>
+      </html>
+      
+ </textarea>
+ <input type="button" value="zamknij okno" onclick="okno_zamknij_czerczonkod()"/>
+ </body>
+ </html>
