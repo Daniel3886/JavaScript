@@ -1,0 +1,30 @@
+Na podstawie Przykładu2 (poniżej), uzupełnij program z zadania przedniego (każdy uczeń miał inny obiekt) z użyciem programowania obiektowego.
+Dopisz jedną właściwość (poza ciałem obiektu) z wpisaną daną, jedną metodę wyświetlającą wartości pola właściwości (dopisaną w zadaniu poprzednim),
+nazwa metody to:
+nazwa obiekt_pokaz_nazwisko_ucznia
+np. samochod_pokaz_kowalski ( metoda dopisana poza ciałem obiektu).
+Przykład 2
+Temat: Dla istniejących już obiektów można deklarować nowe właściwości i metody (poza klasa/funkcją).
+<html>
+<head>
+<script type="text/javascript">
+var czlowiek = {
+nazwisko: 'Nowacki',
+imie: 'Marek',
+zawod: 'informatyk',
+pokaz: function ()
+{
+document.write(this.nazwisko + ' ' + this.imie)
+}
+}
+czlowiek.pokaz();
+czlowiek.wiek=19;
+czlowiek.wypisz=function() {alert('Wiek: ' + this.wiek + 'lat')}
+czlowiek.wypisz();
+</script>
+</head>
+<body>
+<br>
+programowanie obiektowe
+</body>
+</html>
