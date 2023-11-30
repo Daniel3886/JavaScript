@@ -1,1 +1,105 @@
+<html lang="pl-PL">
+<head>
+  <title>Daniel Czeczon 2P szkielet strona zaliczeniowa</title>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100cm;
+      font: normal bold 5rem / 1 '';
+      background-color: black;
+    }
 
+    .text {
+      background-image: url(https://scitechdaily.com/images/White-Dwarf-Star-With-Planet.jpg);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 200%;
+      background-position: -200%;
+      animation: animatedText 6.5s infinite alternate-reverse;
+    }
+
+    @keyframes animatedText {
+      from {
+        background-position: 0%;
+      }
+      to {
+        background-position: 100%;
+      }
+
+    }
+
+    h1 {
+      color: red;
+      margin: 2px;
+      font-size: 2cm;
+      top: 10px;
+      left: 18px;
+      font-weight: bold;
+      font-family: Arial;
+      text-shadow: rgb(0, 0, 0) 3px 3px 3px;
+    }
+
+    input {
+      margin: 4px;
+      background-color: salmon;
+      color: wine;
+      padding: 15px 13px;
+      font-size: 14px;
+      cursor: pointer;
+      outline: none;
+      border-radius: 19px;
+      box-shadow: 0 9px #00000099;
+      height: 50px;
+      align-items: center;
+    }
+
+    .button:hover {
+      background-color: #a7a1a8;
+    }
+
+    .button:active {
+      background-color: maroon;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
+  </style>
+  <script type="text/javascript">
+    // Your object-oriented programming JavaScript code here
+    // ...
+
+    function Osoba(nazwisko, imie, zawod) {
+      this.nazwisko = nazwisko;
+      this.imie = imie;
+      this.zawod = zawod;
+      this.kierowca = 'Jan Kowalski'; // Nowa właściwość poza ciałem obiektu
+    }
+
+    Osoba.prototype.pokaz = function () {
+      alert(this.nazwisko + ' ' + this.imie + ' ' + this.zawod);
+    };
+
+    Osoba.prototype.pokazKierowce = function () {
+      alert('Kierowca: ' + this.kierowca);
+    };
+
+    var osoba1 = new Osoba("Kowalski", "Jan", "kierowca");
+    var osoba2 = new Osoba('Nowak', 'Anna', 'sekretarka');
+    osoba1.pokaz();
+    osoba1.pokazKierowce(); // Wywołanie nowej metody
+    osoba2.pokaz();
+  </script>
+</head>
+<body>
+  <h1 class="text">Daniel Czeczon 2P szkielet strona zaliczeniowa</h1>
+  <form>
+    <div style="width:800px; margin:0 auto;">
+      <!-- Your buttons and onclick functions here -->
+      <!-- ... -->
+    </div>
+  </form>
+</body>
+</html>
