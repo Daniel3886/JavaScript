@@ -1,33 +1,310 @@
 
-<html>
-<head>
-<script type="text/javascript">
-function Osoba(nazwisko, imie, zawod) {
-  this.nazwisko = nazwisko;
-  this.imie = imie;
-  this.zawod = zawod;
-  this.kierowca = 'Jan Kowalski'; // Nowa właściwość poza ciałem obiektu
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100cm;
+  font: normal bold 5rem / 1 '';
+  background-color: black
 }
+.text{
+  background-image: url(https://scitechdaily.com/images/White-Dwarf-Star-With-Planet.jpg);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200%;
+  background-position: -200%;
+  
+  animation: animatedText 6.5s infinite alternate-reverse;
+}
+@keyframes animatedText{
+  from{
+    background-position: 0%;
+  }
+  to{
+    background-position: 100%;
+  }
 
-Osoba.prototype.pokaz = function () {
-  alert(this.nazwisko + ' ' + this.imie + ' ' + this.zawod);
-};
+h1 {
+    color: red;
+    margin: 2px;
+    font-size: 2cm;
+    top: 10px;
+    left: 18px;
+    font-weight: bold;
+    font-family: Arial;
+    text-shadow: rgb(0, 0, 0) 3px 3px 3px ;
+}
+   input{
+   margin: 4px;
+   background-color: salmon;
+   color: wine;
+   padding: 15px 13px;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 19px;
+    box-shadow: 0 9px #00000099;
+    height: 50px;
+    align-items: center;
+  }
+  .button:hover {background-color: #a7a1a8}
+  .button:active {
+    background-color:  maroon;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+	<html lang="pl-PL">
+<head>
+<title> Czerczon 2P</title>
+<link rel="stylesheet" type="text/css" href="styles.css" />
+<script language="JavaScript">
+  function WinOpen_czerczon1() 
+ {
+ window.open("z1_cze.html","okienko1","toolbar=no,directories=no,menubar=no,height=280,width=300,top=200,left=200");
+ }
+ function WinOpen_czerczon2() 
+ {
+ window.open("z2_cze.html","okienko2","toolbar=no,directories=no,menubar=no,height=280,width=300,top=200,left=200");
+ }
+ function WinOpen_czerczon3() 
+ {
+ window.open("z3_cze.html","okienko3","toolbar=no,directories=no,menubar=no,height=280,width=160,top=200,left=200");
+ }
+ function WinOpen_czerczon4() 
+ {
+ window.open("z4_cze.html","okienko4","toolbar=no,directories=no,menubar=no,height=300,width=450,top=200,left=200");
+ }
+ function WinOpen_czerczon5() 
+ {
+ window.open("z5_cze.html","okienko5","toolbar=no,directories=no,menubar=no,height=280,width=700,top=200,left=200");
+ }
+ function WinOpen_czerczon6() 
+ {
+ window.open("z6_cze.html","okienko6","toolbar=no,directories=no,menubar=no,height=300,width=450,top=200,left=200");
+ }
+  function WinOpen_czerczon7() 
+ {
+ window.open("z7_cze.html","okienko7","toolbar=no,directories=no,menubar=no,height=300,width=450,top=200,left=200");
+ }
+  function WinOpen_czerczon8() 
+ {
+ window.open("z8_cze.html","okienko8","toolbar=no,directories=no,menubar=no,height=300,width=450,top=200,left=200");
+ }
+   function WinOpen_czerczon9() 
+ {
+ window.open("z9_cze.html","okienko9","toolbar=no,directories=no,menubar=no,height=300,width=450,top=200,left=200");
+ }
+ function WinOpen_czerczon10() 
+ {
+ window.open("z10_cze.html","okienko9","toolbar=no,directories=no,menubar=no,height=300,width=450,top=200,left=200");
+ }
+ function WinOpen_czerczon11() 
+ {
+ window.open("z11_cze.html","okienko9","toolbar=no,directories=no,menubar=no,height=300,width=450,top=200,left=200");
+ }
+   function WinOpen_czerczon11kod() 
+ {
+ window.open("z11_cze_kod.html","okienko9","toolbar=no,directories=no,menubar=no,height=400,width=400,top=450,left=300");
+ }
+  function WinOpen_czerczon12() 
+ {
+ window.open("z12_cze.html","okienko9","toolbar=no,directories=no,menubar=no,height=300,width=450,top=200,left=200");
+ }
+   function WinOpen_czerczon12kod() 
+ {
+ window.open("z12_cze_kod.html","problem","toolbar=no,directories=no,menubar=no,height=400,width=400,top=450,left=300");
+ }
+   function WinOpen_czerczon13() 
+ {
+ window.open("z13_cze.html","okienko9","toolbar=no,directories=no,menubar=no,height=300,width=450,top=200,left=200");
+ }
+  function WinOpen_czerczon13kod() 
+ {
+ window.open("z13_cze_kod.html","problem","toolbar=no,directories=no,menubar=no,height=400,width=400,top=450,left=300");
+ }
+    function WinOpen_czerczon14() 
+ {
+ window.open("z14_cze.html","okienko9","toolbar=no,directories=no,menubar=no,height=300,width=550,top=200,left=200");
+ }
+   function WinOpen_czerczon14kod() 
+ {
+ window.open("z14_cze_kod.html","problem","toolbar=no,directories=no,menubar=no,height=400,width=400,top=450,left=300");
+ }
+ function WinOpen_czerczon15() 
+ {
+ window.open("z15_cze.html","okienko9","toolbar=no,directories=no,menubar=no,height=300,width=550,top=200,left=200");
+ }
+  function WinOpen_czerczon15kod() 
+ {
+ window.open("z15_cze_kod.html","problem","toolbar=no,directories=no,menubar=no,height=400,width=400,top=450,left=300");
+ }
+ function WinOpen_czerczon16() 
+ {
+ window.open("z16_cze.html","okienko9","toolbar=no,directories=no,menubar=no,height=300,width=600,top=200,left=200");
+ }
+   function WinOpen_czerczon16kod() 
+ {
+ window.open("z16_cze_kod.html","problem","toolbar=no,directories=no,menubar=no,height=400,width=400,top=450,left=300");
+ }
+  function WinOpen_czerczon17() 
+ {
+ window.open("z17_cze.html","okienko9","toolbar=no,directories=no,menubar=no,height=300,width=600,top=200,left=200");
+ }
+ function WinOpen_czerczon18() 
+ {
+ window.open("z18_cze.html","okienko9","toolbar=no,directories=no,menubar=no,height=300,width=600,top=200,left=200");
+ }
+ function WinOpen_czerczon19() 
+ {
+ window.open("z19_cze.html","okienko9","toolbar=no,directories=no,menubar=no,height=300,width=600,top=200,left=200");
+ }
+ function WinOpen_czerczon19kod() 
+ {
+ window.open("z19_cze_kod.html","okienko9","toolbar=no,directories=no,menubar=no,height=500,width=400,top=200,left=200");
+ }
+  function WinOpen_czerczon20() 
+ {
+ window.open("z20_cze.html","okienko9","toolbar=no,directories=no,menubar=no,height=300,width=600,top=200,left=200");
+ }
+ function WinOpen_czerczon20kod() 
+ {
+ window.open("z20_cze_kod.html","okienko9","toolbar=no,directories=no,menubar=no,height=500,width=600,top=200,left=200");
+ }
+ function WinOpen_czerczon21() 
+ {
+ window.open("z21_cze.html","okienko9","toolbar=no,directories=no,menubar=no,height=300,width=600,top=200,left=200");
+ }
+  function WinOpen_czerczon22() 
+ {
+ window.open("z22_cze.html","okienko9","toolbar=no,directories=no,menubar=no,height=300,width=600,top=200,left=200");
+ }
+  function WinOpen_czerczon22kod() 
+ {
+ window.open("z22_cze_kod.html","okienko9","toolbar=no,directories=no,menubar=no,height=500,width=600,top=200,left=200");
+ }
+ function WinOpen_czerczon23() 
+ {
+ window.open("z23_cze.html","okienko9","toolbar=no,directories=no,menubar=no,height=300,width=600,top=200,left=200");
+ }
+  function WinOpen_czerczon23kod() 
+ {
+ window.open("z23_cze_kod.html","okienko9","toolbar=no,directories=no,menubar=no,height=500,width=600,top=200,left=200");
+ }
+ function WinOpen_czerczon24() 
+ {
+ window.open("z24_cze.html","okienko9","toolbar=no,directories=no,menubar=no,height=400,width=600,top=200,left=200");
+ }
+ function WinOpen_czerczon24kod() 
+ {
+ window.open("z24_cze_kod.html","okienko9","toolbar=no,directories=no,menubar=no,height=500,width=600,top=200,left=200");
+ }
+ function WinOpen_czerczon25() 
+ {
+ window.open("z25_cze.html","okienko9","toolbar=no,directories=no,menubar=no,height=400,width=600,top=200,left=200");
+ }
+ function WinOpen_czerczon25kod() 
+ {
+ window.open("z25_cze_kod.html","okienko9","toolbar=no,directories=no,menubar=no,height=500,width=600,top=200,left=200");
+ }
+ function WinOpen_czerczon26() 
+ {
+ window.open("z26_cze.html","okienko9","toolbar=no,directories=no,menubar=no,height=400,width=600,top=200,left=200");
+ }
+ function WinOpen_czerczon26kod() 
+ {
+ window.open("z26_cze_kod.html","okienko9","toolbar=no,directories=no,menubar=no,height=500,width=600,top=200,left=200");
+ }
 
-Osoba.prototype.pokazKierowce = function() {
-  alert('Kierowca: ' + this.kierowca);
-};
-
-var osoba1 = new Osoba("Kowalski", "Jan", "kierowca");
-var osoba2 = new Osoba('Nowak', 'Anna', 'sekretarka');
-osoba1.pokaz();
-osoba1.pokazKierowce(); // Wywołanie nowej metody
-osoba2.pokaz();
-document.write("Dostęp do właściwości" + "<br>");
-document.write("Osoba pierwsza" + " " + osoba1.nazwisko + " " + osoba1.imie + " " + osoba1.zawod);
+ function WinOpen_czerczon27() 
+ {
+ window.open("z27_cze.html","okienko9","toolbar=no,directories=no,menubar=no,height=400,width=600,top=200,left=200");
+ }
+ function WinOpen_czerczon27kod() 
+ {
+ window.open("z27_cze_kod.html","okienko9","toolbar=no,directories=no,menubar=no,height=500,width=600,top=200,left=200");
+ }
+ function WinOpen_czerczon28() 
+ {
+ window.open("z28_cze.html","okienko9","toolbar=no,directories=no,menubar=no,height=400,width=600,top=200,left=200");
+ }
+ function WinOpen_czerczon29() 
+ {
+ window.open("z29_cze.html","okienko9","toolbar=no,directories=no,menubar=no,height=400,width=600,top=200,left=200");
+ }
+ function WinOpen_czerczon30() 
+ {
+ window.open("z30_cze.html","okienko9","toolbar=no,directories=no,menubar=no,height=400,width=600,top=200,left=200");
+ } 
+ function WinOpen_czerczon30kod() 
+ {
+ window.open("z30_cze_kod.html","okienko9","toolbar=no,directories=no,menubar=no,height=500,width=600,top=200,left=200");
+ }
+  function WinOpen_czerczon31() 
+ {
+ window.open("z31_cze.html","okienko9","toolbar=no,directories=no,menubar=no,height=400,width=600,top=200,left=200");
+ }
+  function WinOpen_czerczon31kod() 
+ {
+ window.open("z31_cze_kod.html","okienko9","toolbar=no,directories=no,menubar=no,height=500,width=600,top=200,left=200");
+ }
 </script>
 </head>
 <body>
-<br>
-programowanie obiektowe
+<h1 class="text">Daniel Czeczon 2P szkielet strona zaliczeniowa</h1>
+<form>
+ <div style="width:800px; margin:0 auto;">
+	<input type="button" name="przycisk" value="zadanie 1" onclick="WinOpen_czerczon1()">
+	<input type="button" name="przycisk" value="zadanie 2" onclick="WinOpen_czerczon2()">
+	<input type="button" name="przycisk" value="zadanie 3" onclick="WinOpen_czerczon3()">
+	<input type="button" name="przycisk" value="zadanie 4" onclick="WinOpen_czerczon4()">
+	<input type="button" name="przycisk" value="zadanie 5" onclick="WinOpen_czerczon5()">
+	<input type="button" name="przycisk" value="zadanie 6" onclick="WinOpen_czerczon6()">
+	<input type="button" name="przycisk" value="zadanie 7" onclick="WinOpen_czerczon7()">
+	<input type="button" name="przycisk" value="zadanie 8" onclick="WinOpen_czerczon8()">
+	<input type="button" name="przycisk" value="zadanie 9" onclick="WinOpen_czerczon9()">
+	<input type="button" name="przycisk" value="zadanie 10" onclick="WinOpen_czerczon10()">
+	<input type="button" name="przycisk" value="zadanie 11" onclick="WinOpen_czerczon11()">
+	<input  class="button" type="button" name="przycisk" value="zadanie 11 kod" onclick="WinOpen_czerczon11kod()">
+	<input type="button" name="przycisk" value="zadanie 12" onclick="WinOpen_czerczon12()">
+	<input  class="button" type="button" name="przycisk" value="zadanie 12kod" onclick="WinOpen_czerczon12kod()">
+	<input type="button" name="przycisk" value="zadanie 13" onclick="WinOpen_czerczon13()">
+	<input  class="button" type="button" name="przycisk" value="zadanie 13kod" onclick="WinOpen_czerczon13kod()">
+	<input type="button" name="przycisk" value="zadanie 14" onclick="WinOpen_czerczon14()">
+	<input  class="button" type="button" name="przycisk" value="zadanie 14kod" onclick="WinOpen_czerczon14kod()">
+	<input type="button" name="przycisk" value="zadanie 15" onclick="WinOpen_czerczon15()">
+	<input  class="button" type="button" name="przycisk" value="zadanie 15kod" onclick="WinOpen_czerczon15kod()">
+	<input type="button" name="przycisk" value="zadanie 16" onclick="WinOpen_czerczon16()">
+	<input  class="button" type="button" name="przycisk" value="zadanie 16kod" onclick="WinOpen_czerczon16kod()">
+	<input type="button" name="przycisk" value="zadanie 17" onclick="WinOpen_czerczon17()">
+	<input type="button" name="przycisk" value="zadanie 18" onclick="WinOpen_czerczon18()">
+	<input type="button" name="przycisk" value="zadanie 19" onclick="WinOpen_czerczon19()">
+	<input class="button" type="button" name="przycisk" value="zadanie 19kod" onclick="WinOpen_czerczon19kod()">
+	<input type="button" name="przycisk" value="zadanie 20" onclick="WinOpen_czerczon20()">
+	<input class="button" type="button" name="przycisk" value="zadanie 20kod" onclick="WinOpen_czerczon20kod()">
+	<input type="button" name="przycisk" value="zadanie 21" onclick="WinOpen_czerczon21()">
+	<input type="button" name="przycisk" value="zadanie 22" onclick="WinOpen_czerczon22()">
+	<input class="button" type="button" name="przycisk" value="zadanie 22kod" onclick="WinOpen_czerczon22kod()">
+	<input type="button" name="przycisk" value="zadanie 23" onclick="WinOpen_czerczon23()">
+	<input class="button" type="button" name="przycisk" value="zadanie 23kod" onclick="WinOpen_czerczon23kod()">
+	<input type="button" name="przycisk" value="zadanie 24" onclick="WinOpen_czerczon24()">
+	<input class="button" type="button" name="przycisk" value="zadanie 24kod" onclick="WinOpen_czerczon24kod()">
+	<input type="button" name="przycisk" value="zadanie 25" onclick="WinOpen_czerczon25()">
+	<input class="button" type="button" name="przycisk" value="zadanie 25kod" onclick="WinOpen_czerczon25kod()">
+	<input type="button" name="przycisk" value="zadanie 26" onclick="WinOpen_czerczon26()">
+	<input class="button" type="button" name="przycisk" value="zadanie 26kod" onclick="WinOpen_czerczon26kod()">
+	<input type="button" name="przycisk" value="zadanie 27" onclick="WinOpen_czerczon27()">
+	<input class="button" type="button" name="przycisk" value="zadanie 27kod" onclick="WinOpen_czerczon27kod()">
+	<input type="button" name="przycisk" value="zadanie 28" onclick="WinOpen_czerczon28()">
+	<input type="button" name="przycisk" value="zadanie 29" onclick="WinOpen_czerczon29()">
+	<input type="button" name="przycisk" value="zadanie 30" onclick="WinOpen_czerczon30()">
+	<input class="button" type="button" name="przycisk" value="zadanie 30kod" onclick="WinOpen_czerczon30kod()">
+	<input type="button" name="przycisk" value="zadanie 31" onclick="WinOpen_czerczon31()">
+	<input class="button" type="button" name="przycisk" value="zadanie 31kod" onclick="WinOpen_czerczon31kod()">
+	
+	
+	
+	
+</div>	
+</form>
 </body>
 </html>
