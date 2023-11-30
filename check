@@ -1,35 +1,33 @@
-Na podstawie Przykładu3 (poniżej), uzupełnij program z dwóch zadań poprzednich z użyciem programowania obiektowego.
-Program powinien zawierać:
- Definiowanie konstruktora (klasy). Należy zauważyć, że w JS w wersji przed 2015 niema możliwości definowania klasy ( tak jak w innych językach obiektowych). Dlatego definiowanie klasy odbywa się z użyciem konstruktora ( słowo kluczowe function).
- dodawanie metody do konstruktora z użyciem prototypu, (z czterema polami),
- powoływanie obiektów, (powołanie 3 obiektów),
- dostęp do właściwości (pól) obiektów, (wyświetlenie danych o wszystkich obiektach),
- użycie zdefiniowanej metody. (wyświetlenie danych o wszystkich obiektach).
-Dopisz jedną właściwość (poza ciałem obiektu) z wpisaną daną, jedną metodę wyświetlającą wartości pola właściwości (dopisaną w zadaniu 2??), nazwa metody to nazwa obiekt_pokaz_nazwisko_ucznia np. samochod_pokaz_kowalski ( metoda dopisana poza ciałem obiektu).
-Przykład 3
-Temat: Definiowanie konstruktora, dodawanie metody do konstruktora z użyciem prototypu, powoływanie obiektów, dostęp do właściwości (pól) obiektów, użycie zdefiniowanej metody.
+
 <html>
 <head>
 <script type="text/javascript">
-function klient(nazwisko_k,imie_k,zawod_k)//początek konstruktora
-{
-this.nazwisko=nazwisko_k;
-this.imie=imie_k;
-this.zawod=zawod_k;
-}//koniec konstruktora
-klient.prototype.wypisz = function () //definicja metody
-{
-alert(this.nazwisko + ' ' + this.imie+ ' ' + this.zawod);
+function Osoba(nazwisko, imie, zawod) {
+  this.nazwisko = nazwisko;
+  this.imie = imie;
+  this.zawod = zawod;
+  this.kierowca = 'Jan Kowalski'; // Nowa właściwość poza ciałem obiektu
+}
+
+Osoba.prototype.pokaz = function () {
+  alert(this.nazwisko + ' ' + this.imie + ' ' + this.zawod);
 };
-var osoba1 = new klient("Kowalski", "Jan", "kierowca"); // nowy obiekt osoba1
-var osoba2 = new klient('Nowak', 'Anna', 'sekretarka');
-osoba1.wypisz(); // uruchomienie metody wypisz() dotyczącej osoby 1
-osoba2.wypisz();
-document.write("dostęp do właściwości"+"<br>");
-// poniżej dostęp do pól osoby1
-document.write("klient pierwszy"+" "+osoba1.nazwisko+" "+osoba1.imie+" "+osoba1.zawod);
+
+Osoba.prototype.pokazKierowce = function() {
+  alert('Kierowca: ' + this.kierowca);
+};
+
+var osoba1 = new Osoba("Kowalski", "Jan", "kierowca");
+var osoba2 = new Osoba('Nowak', 'Anna', 'sekretarka');
+osoba1.pokaz();
+osoba1.pokazKierowce(); // Wywołanie nowej metody
+osoba2.pokaz();
+document.write("Dostęp do właściwości" + "<br>");
+document.write("Osoba pierwsza" + " " + osoba1.nazwisko + " " + osoba1.imie + " " + osoba1.zawod);
 </script>
 </head>
 <body>
 <br>
 programowanie obiektowe
+</body>
+</html>
