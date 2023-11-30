@@ -7,24 +7,30 @@ Przykład 2
 Temat: Dla istniejących już obiektów można deklarować nowe właściwości i metody (poza klasa/funkcją).
 <html>
 <head>
+</style>
+
 <script type="text/javascript">
-var czlowiek = {
-nazwisko: 'Nowacki',
-imie: 'Marek',
-zawod: 'informatyk',
+function okno_zamknij_czerczon() 
+{
+window.close()
+}
+</script>
+<script type="text/javascript">
+var Autobus_wyswietl_czerczon = {
+typ: 'Szkolny',
+nazwa: 'Bogdan latośińcki',
+marka: 'Bogdan',
 pokaz: function ()
 {
-document.write(this.nazwisko + ' ' + this.imie)
+document.write(this.typ + ' ' + this.nazwa)
 }
 }
-czlowiek.pokaz();
-czlowiek.wiek=19;
-czlowiek.wypisz=function() {alert('Wiek: ' + this.wiek + 'lat')}
-czlowiek.wypisz();
+Autobus_wyswietl_czerczon.pokaz();
 </script>
 </head>
 <body>
-<br>
-programowanie obiektowe
+<br><br>
+programowanie obiektowe<br>
+<input type="button" value="Zamknij okno" onclick="okno_zamknij_czerczon()">
 </body>
 </html>
