@@ -1,31 +1,25 @@
-Na podstawie Przykładu2 (poniżej), uzupełnij program z zadania przedniego (każdy uczeń miał inny obiekt) z użyciem programowania obiektowego.
-Dopisz jedną właściwość (poza ciałem obiektu) z wpisaną daną, jedną metodę wyświetlającą wartości pola właściwości (dopisaną w zadaniu poprzednim),
-nazwa metody to:
-nazwa obiekt_pokaz_nazwisko_ucznia
-np. samochod_pokaz_kowalski ( metoda dopisana poza ciałem obiektu).
-Przykład 2
-Temat: Dla istniejących już obiektów można deklarować nowe właściwości i metody (poza klasa/funkcją).
 <html>
 <head>
-</style>
-
 <script type="text/javascript">
 function okno_zamknij_czerczon() 
 {
 window.close()
 }
-</script>
-<script type="text/javascript">
-var Autobus_wyswietl_czerczon = {
-typ: 'Szkolny',
-nazwa: 'Bogdan latośińcki',
-marka: 'Bogdan',
-pokaz: function ()
-{
+var czlowiek = {
+this.typ = typ;
+this.nazwa = nazwa;
+this.marka = marka;
+
+this.pokaz = function (){
 document.write(this.typ + ' ' + this.nazwa)
 }
+this.kierowca = 'Jan Kowalski';
+this.pokazKierowce() = function() {
+{alert('Kierowca: ' + this.kierowca)}
 }
-Autobus_wyswietl_czerczon.pokaz();
+var autobus1 = new Autobus('Szkolny','Bogdan','latośińcki'); 
+autobus1.pokaz();
+autobus1.pokazKierowce();
 </script>
 </head>
 <body>
@@ -33,4 +27,3 @@ Autobus_wyswietl_czerczon.pokaz();
 programowanie obiektowe<br>
 <input type="button" value="Zamknij okno" onclick="okno_zamknij_czerczon()">
 </body>
-</html>
