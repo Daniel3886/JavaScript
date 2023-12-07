@@ -1,0 +1,34 @@
+<html>
+<head>
+<script type="text/javascript">
+function okno_zamknij_czerczon() {
+  window.close();
+}
+
+function Autobus(typ, nazwa, marka) {
+  this.typ = typ;
+  this.nazwa = nazwa;
+  this.marka = marka;
+
+  this.pokaz = function () {
+    document.write(this.typ + ' ' + this.nazwa);
+  }
+
+  this.kierowca = 'Jan Kowalski';
+
+  this.pokazKierowce = function() {
+    alert('Kierowca: ' + this.kierowca);
+  }
+}
+
+var autobus1 = new Autobus('Szkolny', 'Bogdan', 'Latośińcki');
+autobus1.pokaz();
+autobus1.pokazKierowce();
+</script>
+</head>
+<body>
+<br><br>
+programowanie obiektowe<br>
+<input type="button" value="Zamknij okno" onclick="okno_zamknij_czerczon()">
+</body>
+</html>

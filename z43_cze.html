@@ -1,0 +1,20 @@
+<html>
+<body>
+<div style="color:red;font-size:50px;">
+<script language="JavaScript">
+function okno_zamknij_czerczon() 
+{
+window.close()
+}
+var user = parseFloat(prompt("Podaj liczbę"));
+
+for(let i=2;i<=user;i++)
+{
+if(i % 2 === 0){
+document.write("wyświetlam "+i+" parzyste raz "+" tutaj Daniel Czerczon"+"<br>");}
+}
+</script>
+</div>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_czerczon()"/>
+</body>
+</html>
