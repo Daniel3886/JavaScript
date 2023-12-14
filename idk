@@ -1,49 +1,36 @@
 <html>
 <head>
-<title> Użycie fukcji </title>
+<title> Użycie funkcji </title>
 <meta charset="utf-8">
 </head>
 <body>
 <div style="font-size:50px;">
 <script language="JavaScript">
-var a=parseFloat(prompt("podaj a=",""));
-var b=parseFloat(prompt("podaj b=",""));
-var c=parseFloat(prompt("podaj c=",""));
+var a = parseFloat(prompt("Podaj a=",""));
+var b = parseFloat(prompt("Podaj b=",""));
+var c = parseFloat(prompt("Podaj c=",""));
 
- document.write("wprowadzone dane: <br> a= "+a+"<br> b= " +b+ "<br> c= "+c+ "<br>");
+document.write("Wprowadzone dane: <br> a= " + a + "<br> b= " + b + "<br> c= " + c + "<br>");
 
- if(a == 0)
-{
- document.write("To nie jest rownanie kwadratowe! Sprobuj ponownie <br>");
- //return a;
+if (a == 0) {
+  document.write("To nie jest równanie kwadratowe! Spróbuj ponownie. <br>");
+} else {
+  var delta = b * b - 4 * a * c;
+  var p = Math.sqrt(Math.abs(delta));
+
+  if (delta == 0) {
+    var wynik = -b / (2 * a);
+    document.write("Równanie ma jedno rozwiązanie, wynosi: " + wynik + " Działanie użyte: delta = b*b - 4*a*c<br>");
+  }
+
+  if (delta > 0) {
+    var x1 = (-b - p) / (2 * a);
+    var x2 = (-b + p) / (2 * a);
+    document.write("Równanie ma dwa rozwiązania, pierwsze wynosi: " + x1 + ", a drugie: " + x2 + " Działanie użyte: x1 = (-b - p) / (2*a)<br> x2 = (-b + p) / (2*a)<br>");
+  } else {
+    document.write("Delta jest ujemna, równanie nie ma rozwiązań!");
+  }
 }
-else
-{
- var delta = b*b - 4*a*c;
- var p = Math.sqrt(delta);}
-
- if (delta == 0)
- {
-  var wynik = -b / (2*a);
-  document.write("Równanie ma jedno rozwiązanie, wynosi: " +wynik+ " Dzialanie uzyte: delta = b*b - 4*a*c<br>");
- }
-
- if (delta > 0)
- {
-  var x1 = (-b - p) / (2*a);
-  var x2 = (-b + p) / (2*a);
-  document.write("Równanie ma dwa rozwiązania, pierwsze wynosi: " + x1 + ", a drugie: " + x2 "Dzialanie uzyte:  x1 = (-b - p) / (2*a)<br> x2 = (-b + p) / (2*a)<br>");
- }
- else
- {
-  document.write("Delta jest ujemna, równanie nie ma rozwiązań!");
- }
-
- 
- 
-
-
-
 </script>
 </div>
 </body>
