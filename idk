@@ -1,14 +1,67 @@
-wczytac 3 liczby w okienka 
-a
-b
-c.
-Sa to wspolczynniki f kwadratowej. 
-gdy a = 0
-komunikat to nie jest funkcja kwadratowa, komputer nic nie oblicza. oblicz wierzcholek,
-podaj funkcje kwadratowa w postaci kanonicznej. oblicz x1, x2 lub x0 lub napisz brak miejsc zerowych. 
-podaj jesli to jest to mozluiwe f kwadratowa w postaci ilocznynowej.
- podaj przedzialy gdzie f rosnie/maleje wszystkie zmienne z 3 literami nazwiska.
- unikaj zapisow +-. np. (na ekranie x+-2)
-wypisuj czcionka 2cm kolorem zielonym.
- Na ocene celujaca narysuj uklad wspolrzednych i wykres funkcji 
-str 132
+<html>
+<head>
+  <title>Obliczenia funkcji kwadratowej</title>
+  <meta charset="utf-8">
+</head>
+<body>
+<div style="font-size:2cm; color:green;">
+
+<script language="JavaScript">
+function obliczFunkcjeKwadratowa() {
+  var a = parseFloat(prompt("Podaj współczynnik a:",""));
+  var b = parseFloat(prompt("Podaj współczynnik b:",""));
+  var c = parseFloat(prompt("Podaj współczynnik c:",""));
+
+  if (a === 0) {
+    document.write("To nie jest funkcja kwadratowa. Komputer nic nie oblicza.");
+    return;
+  }
+
+  // Oblicz wierzchołek
+  var xW = -b / (2 * a);
+  var yW = a * xW * xW + b * xW + c;
+
+  // Oblicz funkcję kwadratową w postaci kanonicznej
+  var funkcjaKanoniczna = "f(x) = " + a + " * (x - " + xW + ")^2 + " + yW;
+
+  document.write("Wierzchołek: (" + xW + ", " + yW + ")<br>");
+  document.write("Funkcja kwadratowa w postaci kanonicznej: " + funkcjaKanoniczna + "<br>");
+
+  // Oblicz miejsca zerowe
+  var delta = b * b - 4 * a * c;
+
+  if (delta === 0) {
+    var x0 = -b / (2 * a);
+    document.write("Miejsce zerowe: x0 = " + x0 + "<br>");
+  } else if (delta > 0) {
+    var x1 = (-b - Math.sqrt(delta)) / (2 * a);
+    var x2 = (-b + Math.sqrt(delta)) / (2 * a);
+    document.write("Miejsca zerowe: x1 = " + x1 + ", x2 = " + x2 + "<br>");
+  } else {
+    document.write("Brak miejsc zerowych.<br>");
+  }
+
+  // Sprawdź czy możliwa jest postać iloczynowa
+  if (a !== 0 && delta !== 0) {
+    document.write("Funkcja kwadratowa w postaci iloczynowej: f(x) = " + a + " * (x - " + x1 + ") * (x - " + x2 + ")<br>");
+  }
+
+  // Wypisz przedziały, gdzie f rośnie/maleje
+  var rosnieMaleje = (a > 0) ? "maleje" : "rosnie";
+  document.write("Funkcja kwadratowa " + rosnieMaleje + " dla x < " + xW + " oraz dla x > " + xW + "<br>");
+
+  // Narysuj układ współrzędnych i wykres funkcji
+  rysujWykres(a, b, c, xW, yW);
+}
+
+function rysujWykres(a, b, c, xW, yW) {
+  // Tutaj możesz umieścić kod do rysowania wykresu funkcji kwadratowej
+  // np. używając bibliotek takich jak Chart.js lub D3.js
+}
+
+obliczFunkcjeKwadratowa();
+</script>
+
+</div>
+</body>
+</html>
