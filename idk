@@ -1,37 +1,14 @@
-<html>
-<head>
-<title> Użycie funkcji </title>
-<meta charset="utf-8">
-</head>
-<body>
-<div style="font-size:50px;">
-<script language="JavaScript">
-var a = parseFloat(prompt("Podaj a=",""));
-var b = parseFloat(prompt("Podaj b=",""));
-var c = parseFloat(prompt("Podaj c=",""));
-
-document.write("Wprowadzone dane: <br> a= " + a + "<br> b= " + b + "<br> c= " + c + "<br>");
-
-if (a == 0) {
-  document.write("To nie jest równanie kwadratowe! Spróbuj ponownie. <br>");
-} else {
-  var delta = b * b - 4 * a * c;
-  var p = Math.sqrt(Math.abs(delta));
-
-  if (delta == 0) {
-    var wynik = -b / (2 * a);
-    document.write("Równanie ma jedno rozwiązanie, wynosi: " + wynik + " Działanie użyte: delta = b*b - 4*a*c<br>");
-  }
-
-  if (delta > 0) {
-    var x1 = (-b - p) / (2 * a);
-    var x2 = (-b + p) / (2 * a);
-    document.write("Równanie ma dwa rozwiązania, pierwsze wynosi: " + x1 + ", a drugie: " + x2 + " Działanie użyte: x1 = (-b - p) / (2*a)<br> x2 = (-b + p) / (2*a)<br>");
-  } else {
-    document.write("Delta jest ujemna, równanie nie ma rozwiązań!");
-  }
-}
-</script>
-</div>
-</body>
-</html>
+wczytac 3 liczby w okienka 
+a
+b
+c.
+Sa to wspolczynniki f kwadratowej. 
+gdy a = 0
+komunikat to nie jest funkcja kwadratowa, komputer nic nie oblicza. oblicz wierzcholek,
+podaj funkcje kwadratowa w postaci kanonicznej. oblicz x1, x2 lub x0 lub napisz brak miejsc zerowych. 
+podaj jesli to jest to mozluiwe f kwadratowa w postaci ilocznynowej.
+ podaj przedzialy gdzie f rosnie/maleje wszystkie zmienne z 3 literami nazwiska.
+ unikaj zapisow +-. np. (na ekranie x+-2)
+wypisuj czcionka 2cm kolorem zielonym.
+ Na ocene celujaca narysuj uklad wspolrzednych i wykres funkcji 
+str 132
