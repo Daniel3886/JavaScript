@@ -1,0 +1,52 @@
+<html>
+<head>
+<title> Użycie fukcji </title>
+<meta charset="utf-8">
+</head>
+<body>
+<div style="font-size:50px;">
+<script language="JavaScript">
+var a=parseFloat(prompt("podaj a=",""));
+var b=parseFloat(prompt("podaj b=",""));
+var c=parseFloat(prompt("podaj c=",""));
+
+
+
+ if(a == 0)
+{
+ document.write("To nie jest rownanie kwadratowe! Sprobuj ponownie <br>");
+ return a;
+}
+else
+{
+ var delta = b*b - 4*a*c;
+ var p = Math.sqrt(delta);
+
+ if (delta == 0)
+ {
+  var wynik = -b / (2*a);
+  document.write("Równanie ma jedno rozwiązanie, wynosi: " + wynik+ "<br>");
+ }
+
+ if (delta > 0)
+ {
+  var x1 = (-b - p) / (2*a);
+  var x2 = (-b + p) / (2*a);
+  document.write("Równanie ma dwa rozwiązania, pierwsze wynosi: " + x1 + ", a drugie: " + x2);
+ }
+ else
+ {
+  document.write("Delta jest ujemna, równanie nie ma rozwiązań!");
+ }
+while(delta >0 || delta == 0 ){
+document.write("wprowadzone dane: a= "+a+" b= " +b+ " c= "+c+"<br> delta: " +delta+ ".");}
+ 
+ 
+
+
+
+</script>
+</div>
+ <input type="button" value="zamknij okno" onclick="okno_zamknij_czerczon()"/>
+</body>
+</html>
