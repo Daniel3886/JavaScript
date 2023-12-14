@@ -10,36 +10,35 @@ var a=parseFloat(prompt("podaj a=",""));
 var b=parseFloat(prompt("podaj b=",""));
 var c=parseFloat(prompt("podaj c=",""));
 
-
+ document.write("wprowadzone dane: <br> a= "+a+"<br> b= " +b+ "<br> c= "+c+ "<br>");
 
  if(a == 0)
 {
  document.write("To nie jest rownanie kwadratowe! Sprobuj ponownie <br>");
- return a;
+ //return a;
 }
 else
 {
  var delta = b*b - 4*a*c;
- var p = Math.sqrt(delta);
+ var p = Math.sqrt(delta);}
 
  if (delta == 0)
  {
   var wynik = -b / (2*a);
-  document.write("Równanie ma jedno rozwiązanie, wynosi: " + wynik+ "<br>");
+  document.write("Równanie ma jedno rozwiązanie, wynosi: " +wynik+ " Dzialanie uzyte: delta = b*b - 4*a*c<br>");
  }
 
  if (delta > 0)
  {
   var x1 = (-b - p) / (2*a);
   var x2 = (-b + p) / (2*a);
-  document.write("Równanie ma dwa rozwiązania, pierwsze wynosi: " + x1 + ", a drugie: " + x2);
+  document.write("Równanie ma dwa rozwiązania, pierwsze wynosi: " + x1 + ", a drugie: " + x2 "Dzialanie uzyte:  x1 = (-b - p) / (2*a)<br> x2 = (-b + p) / (2*a)<br>");
  }
  else
  {
   document.write("Delta jest ujemna, równanie nie ma rozwiązań!");
  }
-while(delta >0 || delta == 0 ){
-document.write("wprowadzone dane: a= "+a+" b= " +b+ " c= "+c+"<br> delta: " +delta+ ".");}
+
  
  
 
@@ -47,6 +46,5 @@ document.write("wprowadzone dane: a= "+a+" b= " +b+ " c= "+c+"<br> delta: " +del
 
 </script>
 </div>
- <input type="button" value="zamknij okno" onclick="okno_zamknij_czerczon()"/>
 </body>
 </html>
