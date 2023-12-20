@@ -1,0 +1,79 @@
+<html>
+<head>
+  <title> Funkcja Kwadratowa </title>
+  <meta charset="utf-8">
+</head>
+<body>
+  <div style="font-size:2cm; color:green;">
+    <script language="JavaScript">
+      var a = parseFloat(prompt("Podaj a="));
+      var b = parseFloat(prompt("Podaj b="));
+      var c = parseFloat(prompt("Podaj c="));
+
+      document.write("Wprowadzone dane: <br> a= " + a + "<br> b= " + b + "<br> c= " + c + "<br>");
+
+      if (a == 0) {
+        document.write("To nie jest równanie kwadratowe! Spróbuj ponownie. <br>");
+      } else {
+        var delta = (b * b) - 4 * a * c;
+        var p = Math.sqrt(delta);
+      }
+
+      if (delta == 0) {
+        var wynik = -b / (2 * a);
+        document.write("Równanie ma jedno rozwiązanie, wynosi: " + wynik.toFixed(2) + "<br><br>");
+        document.write("Działanie użyte: delta = b*b - 4*a*c");
+      }
+
+      if (delta > 0) {
+        var p = Math.sqrt(delta);
+        var x1 = (-b - p) / (2 * a);
+        var x2 = (-b + p) / (2 * a);
+        var delta = (b * b) - 4 * a * c;
+        document.write("Równanie ma dwa rozwiązania, pierwsze wynosi (x1): " + x1.toFixed(2) + ", a drugie (x2): " + x2.toFixed(2) + "<br><br>");
+        document.write("Działanie użyte: x1 = (-b - p) / (2*a)<br> x2 = (-b + p) / (2*a)<br>");
+
+        // Funkcje rosnącą i malejącą
+        document.write("Wartość funkcji rosnącej dla x=" + x1.toFixed(2) + " , " + funkcjaRosnaca(x1).toFixed(2) + "<br>");
+        document.write("Wartość funkcji malejącej dla x=" + x2.toFixed(2) + " , " + funkcjaMalejaca(x2).toFixed(2) + "<br>");
+      } else {
+        document.write("Delta jest ujemna, równanie nie ma rozwiązań!");
+      }
+
+      function funkcjaRosnaca(x) {
+        return a * (x * x) + b * x + c;
+      }
+
+      function funkcjaMalejaca(x) {
+        return -a * (x * x) + b * x + c;
+      }
+
+      document.write("parabola podanego wyniku: ");
+    </script>
+  </div>
+
+
+  <canvas id="myCanvas" width="300" height="150"></canvas>
+
+  <script language="JavaScript">
+
+
+    rysujParabole(a, b, c);
+
+    function rysujParabole(a, b, c) {
+      var canvas = document.getElementById('myCanvas');
+      var ctx = canvas.getContext('2d');
+      ctx.clearRect(0, 0, canvas.width, canvas.height); 
+
+      ctx.beginPath();
+      for (var i = 0; i <= canvas.width; i++) {
+        var x = (i - canvas.width / 2) / 10; 
+        var y = funkcjaRosnaca(x);
+        ctx.lineTo(i, canvas.height / 2 - y);
+      }
+
+      ctx.stroke();
+    }
+  </script>
+</body>
+</html>
