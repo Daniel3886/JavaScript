@@ -20,9 +20,15 @@
       }
 
       if (delta == 0) {
+        var delta = (b * b) - 4 * a * c;
+        var p = Math.sqrt(delta);
+        var daniel = -b / (2 * a);
         var wynik = -b / (2 * a);
+        var czerczon = -p/ (4 * a);
+        document.write("<br>Funckja iloczynowa<br>");
         document.write("Równanie ma jedno rozwiązanie, wynosi: " + wynik.toFixed(2) + "<br><br>");
-        document.write("Działanie użyte: delta = b*b - 4*a*c");
+        document.write("Działanie użyte: delta = b*b - 4*a*c<br>");
+        document.write("Wierzchołek: x=" +daniel+ " y=" +czerczon+ "<br>");
       }
 
       if (delta > 0) {
@@ -30,22 +36,44 @@
         var x1 = (-b - p) / (2 * a);
         var x2 = (-b + p) / (2 * a);
         var delta = (b * b) - 4 * a * c;
+        var daniel= -b / (2 * a);
+        var czerczon = -p/ (4 * a);
+        document.write("<br>Funckja kwadratowa<br>");
         document.write("Równanie ma dwa rozwiązania, pierwsze wynosi (x1): " + x1.toFixed(2) + ", a drugie (x2): " + x2.toFixed(2) + "<br><br>");
-        document.write("Działanie użyte: x1 = (-b - p) / (2*a)<br> x2 = (-b + p) / (2*a)<br>");
+        document.write("Działanie użyte: x1 = (-b - Δ) / (2*a)<br> x2 = (-b + Δ) / (2*a)<br>");
+        document.write("<br>Wierzchołek: x=" +daniel+ " y=" +czerczon+ "<br>");
 
-        // Funkcje rosnącą i malejącą
-        document.write("Wartość funkcji rosnącej dla x=" + x1.toFixed(2) + " , " + funkcjaRosnaca(x1).toFixed(2) + "<br>");
-        document.write("Wartość funkcji malejącej dla x=" + x2.toFixed(2) + " , " + funkcjaMalejaca(x2).toFixed(2) + "<br>");
-      } else {
-        document.write("Delta jest ujemna, równanie nie ma rozwiązań!");
       }
 
+        // Funkcje rosnącą i malejącą
+        if(a>0){
+        document.write("Wartość funkcji malejącej dla x= -∞ , " + funkcjaM(x1).toFixed(2) + "<br>");
+        document.write("Wartość funkcji rosnącej dla x= "+ funkcjaR(x2).toFixed(2) +", ∞ <br>");
+      } 
+
+      if (delta < 0 ) {
+        document.write("Delta jest ujemna, równanie nie ma rozwiązań! <br>");
+      }
+      
+      if(a<0){
+        document.write("Wartość funkcji rosnącej dla x= -∞ , "+ funkcjaR(x1).toFixed(2) + "<br>");
+        document.write("Wartość funkcji malejącej dla x= "+ funkcjaM(x2).toFixed(2) + " , ∞ <br>"); 
+      }
+
+
       function funkcjaRosnaca(x) {
-        return a * (x * x) + b * x + c;
+        return a * (x * x) + (b * x) + c;
       }
 
       function funkcjaMalejaca(x) {
-        return -a * (x * x) + b * x + c;
+        return -a * (x * x) + (b * x) + c;
+      }
+
+      function funkcjaM(x) {
+        return -b / (2 * a);
+      }
+      function funkcjaR(x) {
+        return -b / (2 * a);
       }
 
       document.write("parabola podanego wyniku: ");
@@ -71,7 +99,7 @@
         var y = funkcjaRosnaca(x);
         ctx.lineTo(i, canvas.height / 2 - y);
       }
-
+      ctx.strokeStyle = "green";
       ctx.stroke();
     }
   </script>
