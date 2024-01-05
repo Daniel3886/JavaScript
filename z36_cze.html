@@ -1,0 +1,43 @@
+<html>
+<body>
+<div style="color:green;font-size:50px;" id="div1">
+ <script language="JavaScript">
+    function okno_zamknij_czerczon() 
+ {
+ window.close()
+ }
+    document.write("MENU<br><br>");
+    document.write("<font color=red size=4>1 - Czerwony<br>");
+    document.write("<font color=blue size=4>2 - Niebieski<br>");
+var x=prompt("podaj liczbę x=","");
+ var a=parseFloat(x);
+ var a= parseFloat(document.getElementById('a').value);
+ function myFunction(){
+ if(a==1)
+ {
+    const para = document.createElement("p");
+    const node = document.createTextNode("wpisałeś kolor czerwony x="+a);
+    para.appendChild(node);
+    const element = document.getElementById("div1");
+    element.appendChild(para);
+    element.style.color = "red";
+
+}
+if(a==2){
+    const para = document.createElement("p");
+    const node = document.createTextNode("wpisałeś kolor niebieski x="+a);
+    para.appendChild(node);
+    const element = document.getElementById("div1");
+    element.appendChild(para);
+    element.style.color = "blue";
+}
+}
+// Dokończ dwa pozostałe przypadki a==0 i a<0
+// polskie litery mają działać(uzupełnij w kodzie strony)
+ </script>
+
+<input type="button" id="SprawdzButton" value="Sprawdz" Onclick="myFunction();"><br><br>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_czerczon()"/>
+</div>
+</body>
+</html>
