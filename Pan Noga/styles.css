@@ -1,34 +1,163 @@
-@media (min-width: 1308px) {
-.container {width:1050px;}
-aside {width:30%;}
-#main {width:65%;}
-}
-@media (max-width: 1100px) and (min-width: 1000px) {
-.container {width:1048px;}
-aside {width:30%;}
-#main {width:65%;}
 body {
-    background-color: yellow;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+  }
+  
+  .size {
+    width: 1000px;
+    height: 400px;
+  }
+  
+  .center {
+    text-align: center;
+    position: relative;
+  }
+  
+  .left {
+    text-align: left;
+    position: relative;
+  }
+  
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px; /* Adjusted padding to reduce spacing */
+  }
+  
+  .center2 {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 600px;
+  }
+  
+  .title {
+    color: burlywood;
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    font-size: 8rem;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+    margin: 0;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px; /* Adjusted padding to reduce spacing */
+  }
+  
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 5px; /* Adjusted margin to reduce spacing */
+  }
+  
+  button {
+    width: 400px;
+    height: 60px;
+    font-weight: bold;
+    background-color: rgb(219, 144, 5);
+    margin-bottom: 3px;
+    font-size: 1rem;
+    text-align: left;
+    line-height: 60px;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 3px solid rgb(219, 144, 5);
+    transition: all .35s;
+    cursor: pointer;
+  }
+  
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  @media (min-width: 1308px) {
+    .container {
+      width: 1050px;
+    }
+
+    aside {
+      width: 30%;
+    }
+
+    #main {
+      width: 65%;
+    }
+  }
+
+  @media (max-width: 1100px) and (min-width: 1000px) {
+    .container {
+      width: 1048px;
+    }
+
+    aside {
+      width: 30%;
+    }
+
+    #main {
+      width: 65%;
+    }
+  }
+
+  @media (max-width: 940px) and (min-width: 748px) {
+    .container {
+      width: 750px;
+    }
+
+    aside {
+      width: 30%;
+    }
+
+    #main {
+      width: 65%;
+    }
+  }
+
+  @media (max-width: 448px) and (min-width: 288px) {
+    .container {
+      width: 450px;
+    }
+
+    aside,
+    #main {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .container {
+      width: 90%;
+    }
+
+    aside,
+    #main {
+      width: 100%;
+    }
+  }
+  @media (max-width: 1200px) {
+.flex-container {
+  flex-direction: column; /* Change the flex direction to column */
+  align-items: center; /* Center items in the column */
+}
+
+.left {
+  margin-top: 10px; /* Add some spacing between the text and buttons */
 }
 }
-@media (max-width: 940px) and (min-width: 748px) {
-.container {width:750px;}
-aside {width:30%;}
-#main {width:65%;}
-body {
-    background-color: green;
-}
-}
-@media (max-width: 448px) and (min-width: 288px) {
-.container {width:450px;}
-aside,
-#main {width:100%;}
-body {
-    background-color: blue;
-}
-}
-@media (max-width: 500px) {
-.container {width:90%;}
-aside,
-#main {width:100%;}
-}
+
+  
