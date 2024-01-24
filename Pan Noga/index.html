@@ -87,45 +87,6 @@
             transition: background-color 1.5s ease;
         }
     </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            function scrollToCenter() {
-                document.getElementById('srodek').scrollIntoView({ behavior: 'smooth' });
-            }
-
-            function scrollToTop() {
-                document.getElementById('gora').scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-
-            // Function to highlight the clicked section and scroll to it
-            function handleMenuClick(sectionId) {
-                // Remove highlight from all sections
-                document.querySelectorAll(".center2 > div").forEach(function (section) {
-                    section.classList.remove("highlight");
-                });
-
-                // Add highlight to the clicked section
-                document.getElementById(sectionId).classList.add("highlight");
-
-                // Scroll to the clicked section
-                document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
-
-                // Remove the highlight after 1.5 seconds
-                setTimeout(function () {
-                    document.getElementById(sectionId).classList.remove("highlight");
-                }, 1500);
-            }
-
-            // Add click event listeners to each menu item
-            document.querySelectorAll('.left button').forEach(function (menuItem) {
-                menuItem.addEventListener('click', function (event) {
-                    event.preventDefault(); // Prevent the default behavior of anchor links
-                    var targetSectionId = menuItem.innerText.toLowerCase().replace(/\s/g, ''); // Extract section id
-                    handleMenuClick(targetSectionId);
-                });
-            });
-        });
-    </script>
     <title>Podlasie</title>
 </head>
 
@@ -135,14 +96,14 @@
         <h1 class="title">Podlasie</h1>
         <div class="flex-container">
             <div class="left">
-                <button onclick="scrollToTop()">Geografia</button><br>
-                <button onclick="scrollToTop()">Historia</button><br>
-                <button onclick="scrollToCenter()">Wycieczki</button><br>
-                <button onclick="scrollToCenter()">Ciekawe miejsca</button><br>
-                <button onclick="scrollToCenter()">Kuchnia regionalna</button><br>
+                <a href="#geo">geografia</a><br>
+                <a href="#his">Historia</a><br>
+                <a href="#wyc">Wycieczka</a><br>
+                <a href="#ciek">Ciekawe Miejsca</a><br>
+                <a href="#kuch">kuchnia Regionalna</a>
             </div>
             <div class="center2">
-                <div id="gora">
+                <div id="geo" class="p">
                     <h1>Podlasie</h1>
                     <p>Podlasie to region w północno-wschodniej Polsce.<br> Jest to obszar o różnorodnym krajobrazie,
                         który obejmuje zarówno tereny równinne, jak i pagórkowate, a także liczne lasy i rzeki.</p>
@@ -161,48 +122,54 @@
                         <li>Klimat Podlasia jest umiarkowany, kontynentalny.</li>
                         <li>Zimy są zazwyczaj śnieżne i mroźne, natomiast lata ciepłe.</li>
                     </ul>
-
+                </div>
+                <div id="his" class="p">
                     <h1>Historia</h1>
                     <ul>
                         <li>Podlasie ma bogatą historię, związana z różnymi okresami panowania różnych państw, w tym
                             Polski, Litwy i Rosji.</li>
                         <li>W regionie zachowały się liczne zabytki architektoniczne, kościoły drewniane, zamki.</li>
                     </ul>
-                </div>
-                <div id="srodek">
+
                     <h1>Kultura</h1>
                     <ul>
                         <li>Podlasie jest miejscem, gdzie spotykają się różne kultury, zwłaszcza polska, białoruska i
                             litewska.</li>
                         <li>Folklor podlaski obejmuje tradycyjną muzykę, taniec i rękodzieło.</li>
                     </ul>
-
+                </div>
+                <div id="wyc" class="p">
                     <h1>Wycieczki</h1>
                     <ul>
                         <li>Wigry: Monastery Wigry i malownicze Jezioro Wigry.</li>
                         <li>Białowieża: Ostatni pierwotny las nizinny w Europie, gdzie żyją żubry.</li>
                         <li>Supraśl: Znane z Monastyru prawosławnego i ikon.</li>
                     </ul>
-
+                </div>
+                <div id="ciek" class="p">
                     <h1>Ciekawe Miejsca</h1>
                     <ul>
                         <li>Białystok: Największe miasto w regionie, z ciekawą architekturą, parkami i muzeami.</li>
                         <li>Tykocin: Zabytkowe miasteczko z synagogą, zamkiem i malowniczym rynkiem.</li>
                         <li>Drohiczyn: Z widokiem na rzekę Bug, z katedrą i skansenem.</li>
                     </ul>
-
+                </div>
+                <div id="kuch" class="p">
                     <h1>Kuchnia Regionalna</h1>
                     <ul>
-                        <li>Kuchnia podlaska opiera się na tradycyjnych produktach, takich jak ziemniaki, mąka, mięso.</li>
+                        <li>Kuchnia podlaska opiera się na tradycyjnych produktach, takich jak ziemniaki, mąka, mięso.
+                        </li>
                         <li>Potrawy to m.in. kiszka ziemniaczana, babka ziemniaczana, pierogi, placki ziemniaczane.</li>
                         <li>Wpływy kuchni białoruskiej i litewskiej są również widoczne.</li>
                     </ul>
                 </div>
             </div>
         </div>
-        <footer>
-            <p>&copy; 2024 Daniel Czerczon 2P, zadanie z @media</p>
-        </footer>
+    </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Daniel Czerczon 2P, zadanie z @media</p>
+    </footer>
     </div>
 </body>
 
