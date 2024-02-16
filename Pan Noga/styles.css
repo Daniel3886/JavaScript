@@ -24,7 +24,7 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     max-width: 1000px;
-    padding: 10px; /* Adjusted padding to reduce spacing */
+    padding: 10px; 
   }
   
   .center2 {
@@ -49,14 +49,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 10px; /* Adjusted padding to reduce spacing */
+    padding: 10px; 
   }
   
   .button-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 5px; /* Adjusted margin to reduce spacing */
+    margin-top: 5px; 
   }
   
   a {
@@ -172,12 +172,12 @@ body {
   }
   @media (max-width: 1200px) {
 .flex-container {
-  flex-direction: column; /* Change the flex direction to column */
-  align-items: center; /* Center items in the column */
+  flex-direction: column; 
+  align-items: center;
 }
 
 .left {
-  margin-top: 10px; /* Add some spacing between the text and buttons */
+  margin-top: 10px; 
 }
 }
 
