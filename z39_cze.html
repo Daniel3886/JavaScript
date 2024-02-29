@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 39</title>
+</head>
+<body>
+    <script>
+function okno_zamknij_czerczon() 
+{
+window.close()
+}
+        // Funkcja sprawdzająca rok
+        function sprawdzRok(rok_kow) {
+            var rok_javascript = 1995; // Rok, od którego JavaScript jest w użyciu
+
+            if (rok_kow === rok_javascript) {
+                document.write("<p style='color: blue; font-size: 4em;'>Brawo, znasz rok od kiedy działa JavaScript.</p>");
+            } else {
+                document.write("<p style='color: red; font-size: 7em;'>Źle, musisz jeszcze poczytać.</p>");
+            }
+
+            document.write("<p>Wczytany rok = " + rok_kow + "</p>");
+        }
+
+        // Testowanie funkcji
+        var rok_uzytkownika = prompt("Podaj rok, od którego działa JavaScript:");
+        sprawdzRok(parseInt(rok_uzytkownika));
+    </script>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_czerczon()"/>
+
+</body>
+</html>

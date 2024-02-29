@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Rysowanie prostokąta</title>
+</head>
+<body>
+    <div style="font-family: monospace;">
+        <script>
+function okno_zamknij_czerczon() 
+{
+window.close()
+}
+            var imie = prompt("Podaj swoje imię:");
+            var nazwisko = prompt("Podaj swoje nazwisko:");
+
+            // Obliczanie wartości a i b
+            var a_kow = (nazwisko.length % 4) + 5;
+            var b_kow = (imie.length % 6) + 20;
+
+            var prostokat = "";
+
+            // Górna krawędź
+            prostokat += "*".repeat(a_kow + 2) + "<br>";
+
+            // Wypełnienie środka prostokąta
+            for (var i = 0; i < b_kow; i++) {
+                prostokat += "*";
+                prostokat += "&nbsp;".repeat(a_kow);
+                prostokat += "*<br>";
+            }
+
+            // Dolna krawędź
+            prostokat += "*".repeat(a_kow + 2) + "<br>";
+
+            document.write(prostokat);
+        </script>
+    </div>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_czerczon()"/>
+
+</body>
+</html>

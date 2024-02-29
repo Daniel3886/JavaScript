@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 44</title>
+</head>
+<body>
+    <div id="wynik" style="font-size: 40px;"></div>
+
+    <script>
+function okno_zamknij_czerczon() 
+{
+window.close()
+}
+        var nazwisko = "Czerczon";
+        var imie = "Daniel";
+
+        var liczbaLiterNazwiska = nazwisko.length;
+        var ileRazyWyswietlic = (liczbaLiterNazwiska % 4) + 10;
+        var wielkoscLiter = (liczbaLiterNazwiska % 3) + 40;
+
+        var wynikDiv = document.getElementById("wynik");
+
+        for (var i = 1; i <= ileRazyWyswietlic; i++) {
+            if (i % 2 === 0) {
+                wynikDiv.innerHTML += "<span style='font-size: " + wielkoscLiter + "px;'>" + imie + "</span><br>";
+            } else {
+                wynikDiv.innerHTML += "<span style='font-size: " + wielkoscLiter + "px;'>" + nazwisko + "</span><br>";
+            }
+        }
+    </script>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_czerczon()"/>
+ 
+</body>
+</html>

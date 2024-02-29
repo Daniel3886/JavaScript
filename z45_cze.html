@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 45</title>
+</head>
+<body>
+    <label for="dane">Wpisz liczbę:</label>
+    <input type="number" id="dane">
+    <button onclick="wyswietl()">Wyświetl</button>
+    <div id="wynik"></div>
+
+    <script>
+function okno_zamknij_czerczon() 
+{
+window.close()
+}
+        function wyswietl() {
+            var dane = parseInt(document.getElementById("dane").value);
+            var nazwisko = "Czerczon";
+            var imie = "Daniel";
+
+            var liczbaLiterNazwiska = nazwisko.length;
+            var ileRazyWyswietlic = (liczbaLiterNazwiska % 4) + 10;
+            var wielkoscLiter = (liczbaLiterNazwiska % 3) + 40;
+
+            var wynikDiv = document.getElementById("wynik");
+            wynikDiv.innerHTML = "";
+
+            if (isNaN(dane)) {
+                wynikDiv.innerHTML = "Wpisz liczbę!";
+                return;
+            }
+
+            if (dane % 2 === 0) {
+                for (var i = 0; i < ileRazyWyswietlic; i++) {
+                    wynikDiv.innerHTML += "<span style='color: blue; font-size: " + wielkoscLiter + "px;'>" + nazwisko + "</span><br>";
+                }
+            } else {
+                for (var i = 0; i < ileRazyWyswietlic; i++) {
+                    wynikDiv.innerHTML += "<span style='color: green; font-size: " + wielkoscLiter + "px;'>" + imie + "</span><br>";
+                }
+            }
+        }
+    </script>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_czerczon()"/>
+ 
+</body>
+</html>

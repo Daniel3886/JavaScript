@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Rysowanie prostokąta</title>
+</head>
+<body>
+    <div style="font-family: monospace;">
+        <script>
+function okno_zamknij_czerczon() 
+{
+window.close()
+}
+            var a_kow = prompt("Podaj szerokość prostokąta (liczba gwiazdek w poziomie):");
+            var b_kow = prompt("Podaj wysokość prostokąta (liczba gwiazdek w pionie):");
+            var prostokat = "";
+
+            // Górna krawędź
+            prostokat += "*".repeat(a_kow) + "<br>";
+
+            // Wypełnienie środka prostokąta
+            if (b_kow > 2) {
+                for (var i = 0; i < b_kow - 2; i++) {
+                    prostokat += "*";
+                    prostokat += "&nbsp;".repeat(a_kow - 2);
+                    prostokat += "*<br>";
+                }
+            }
+
+            // Dolna krawędź
+            if (b_kow > 1) {
+                prostokat += "*".repeat(a_kow) + "<br>";
+            }
+
+            document.write(prostokat);
+        </script>
+    </div>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_czerczon()"/>
+
+</body>
+</html>

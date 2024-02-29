@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Sprawdzenie danych</title>
+</head>
+<body>
+    <div style="color:red;font-size:50px;">
+        <script language="JavaScript">
+function okno_zamknij_czerczon() 
+{
+window.close()
+}
+            var h_kow, a_kow;
+
+            do {
+                var wysokosc = prompt("Wysokość=", "");
+                h_kow = parseFloat(wysokosc);
+            } while (h_kow <= 0);
+
+            do {
+                var podstawa = prompt("Podstawa=", "");
+                a_kow = parseFloat(podstawa);
+            } while (!(a_kow > 0));
+
+            var Pole = a_kow * h_kow / 2;
+            document.write("Pole = " + Pole.toFixed(2) + " cm^2" + "<br>");
+        </script>
+    </div>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_czerczon()"/>
+ 
+</body>
+</html>

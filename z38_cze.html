@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 38</title>
+</head>
+<body>
+    <script>
+function okno_zamknij_czerczon() 
+{
+window.close()
+}
+        // Funkcja sprawdzająca parzystość liczby
+        function sprawdzParzystoscLiczby(liczba) {
+            if (liczba % 2 === 0) {
+                document.write("<p style='color: red; font-size: 3em;'>Liczba " + liczba + " jest parzysta.</p>");
+            } else {
+                document.write("<p style='color: silver; font-size: 5em;'>Liczba " + liczba + " jest nieparzysta.</p>");
+            }
+        }
+
+        // Pobranie liczby od użytkownika
+        var liczba = prompt("Podaj liczbę:");
+
+        // Sprawdzenie parzystości i wyświetlenie wyniku
+        sprawdzParzystoscLiczby(parseInt(liczba));
+    </script>
+     <input type="button" value="zamknij okno" onclick="okno_zamknij_czerczon()"/>
+
+</body>
+</html>

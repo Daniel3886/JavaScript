@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Liczby pierwsze z wykorzystaniem wzoru</title>
+</head>
+<body>
+    <script>
+function okno_zamknij_czerczon() 
+{
+window.close()
+}
+        // Funkcja sprawdzająca czy dana liczba jest pierwsza
+        function isPrime(num) {
+            if (num <= 1) return false;
+            if (num <= 3) return true;
+            if (num % 2 === 0 || num % 3 === 0) return false;
+            for (let i = 5; i * i <= num; i += 6) {
+                if (num % i === 0 || num % (i + 2) === 0) return false;
+            }
+            return true;
+        }
+
+        // Funkcja obliczająca wartość wielomianu dla danej wartości i
+        function calculatePolynomial(i) {
+            return (i * i) + i + 41;
+        }
+
+        // Zmienna przechowująca wyniki
+        var results = "";
+
+        // Zmienna kontrolująca liczbę wydrukowanych wyników
+        var count = 0;
+
+        // Pętla obliczająca i wyświetlająca liczby pierwsze
+        for (var i = 0; i < 40; i++) {
+            var value = calculatePolynomial(i);
+            if (isPrime(value)) {
+                results += "i=" + i + " w(" + i + ")=" + value + "<br>";
+                count++;
+                if (count === 5) {
+                    results += "…………………………………………………………..<br>";
+                    count = 0;
+                }
+            }
+        }
+
+        // Wyświetlenie wyników
+        document.write(results);
+
+        // Wyświetlenie komunikatu o kontynuacji
+        confirm("Aby kontynuować, naciśnij dowolny klawisz");
+    </script>
+        <input type="button" value="zamknij okno" onclick="okno_zamknij_czerczon()"/>
+
+</body>
+</html>

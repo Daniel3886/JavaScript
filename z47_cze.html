@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Sprawdzenie trójkąta</title>
+</head>
+<body>
+    <div style="color:red;font-size:50px;">
+        <script language="JavaScript">
+            function WinOpen_czerczon46() {
+			window.open("z46_cze.html", "okienko9", "toolbar=no,directories=no,menubar=no,height=400,width=600,top=200,left=200");
+		}
+        function WinOpen_czerczon46kod() {
+			window.open("z46_cze_kod.html", "okienko9", "toolbar=no,directories=no,menubar=no,height=500,width=600,top=200,left=200");
+		}
+        function okno_zamknij_czerczon() 
+        {
+        window.close()
+        }
+            var a_kow, b_kow, c_kow;
+
+            do {
+                var bok1 = prompt("Podaj długość pierwszego boku:", "");
+                a_kow = parseFloat(bok1);
+            } while (a_kow <= 0);
+
+            do {
+                var bok2 = prompt("Podaj długość drugiego boku:", "");
+                b_kow = parseFloat(bok2);
+            } while (b_kow <= 0);
+
+            do {
+                var bok3 = prompt("Podaj długość trzeciego boku:", "");
+                c_kow = parseFloat(bok3);
+            } while (c_kow <= 0);
+
+            if (a_kow + b_kow > c_kow && a_kow + c_kow > b_kow && b_kow + c_kow > a_kow) {
+                document.write("Trzy boki " + a_kow + ", " + b_kow + ", " + c_kow + " tworzą trójkąt.");
+            } else {
+                document.write("Trzy boki " + a_kow + ", " + b_kow + ", " + c_kow + " nie tworzą trójkąta.");
+            }
+        </script>
+    </div>
+    
+			<input type="button" name="przycisk" value="zadanie 46" onclick="WinOpen_czerczon46()">
+			<input class="button" type="button" name="przycisk" value="zadanie 46kod" onclick="WinOpen_czerczon46kod()">
+            <input type="button" value="zamknij okno" onclick="okno_zamknij_czerczon()"/>
+
+</body>
+</html>

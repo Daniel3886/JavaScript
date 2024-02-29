@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Obliczanie silni</title>
+</head>
+<body>
+    <div style="font-size: 20px;">
+        <script>
+function okno_zamknij_czerczon() 
+{
+window.close()
+}
+            var n_kow = parseInt(prompt("Podaj liczbę n:"));
+            var silnia_kow = 1;
+            var equation = "";
+
+            if (n_kow === 0) {
+                equation = "0! = 1";
+            } else if (n_kow > 0) {
+                for (var i = 1; i <= n_kow; i++) {
+                    silnia_kow *= i;
+                    equation += i;
+                    if (i !== n_kow) {
+                        equation += " * ";
+                    }
+                }
+                equation += " = " + silnia_kow;
+            } else {
+                equation = "Podano nieprawidłową liczbę.";
+            }
+
+            document.write(equation);
+        </script>
+    </div>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_czerczon()"/>
+
+</body>
+</html>
+
+
+

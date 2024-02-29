@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Tworzenie wzoru</title>
+</head>
+<body>
+    <div style="font-size: 20px;">
+        <script>
+function okno_zamknij_czerczon() 
+{
+window.close()
+}
+            var liczba_powtorzen = parseInt(prompt("Podaj liczbę powtórzeń:"));
+            var inicjaly = prompt("Podaj Twoje inicjały:");
+            var liczba_inicjaly = parseInt(prompt("Podaj liczbę:"));
+            var wzor = "";
+
+            for (var i = 1; i <= liczba_powtorzen; i++) {
+                for (var j = 0; j < i; j++) {
+                    wzor += "&nbsp;";
+                }
+                wzor += liczba_inicjaly + "_" + inicjaly + "_" + liczba_inicjaly + "<br>";
+            }
+
+            document.write(wzor);
+        </script>
+    </div>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_czerczon()"/>
+
+</body>
+</html>

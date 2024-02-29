@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Suma szeregu harmonicznego</title>
+</head>
+<body>
+    <div style="font-size: 20px;">
+        <script>
+function okno_zamknij_czerczon() 
+{
+window.close()
+}
+            var suma = 0;
+
+            for (var i = 1; i <= 1000000; i++) {
+                suma += 1 / i;
+               // document.write(+i + "<br>");
+            }
+
+            document.write("Suma szeregu harmonicznego od pierwszego do milionowego wyrazu wynosi: " + suma.toFixed(5));
+        </script>
+    </div>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_czerczon()"/>
+ 
+</body>
+</html>

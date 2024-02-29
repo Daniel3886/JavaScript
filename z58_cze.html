@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Liczby nieparzyste</title>
+</head>
+<body>
+    <script>
+function okno_zamknij_czerczon() 
+{
+window.close()
+}
+        var liczba1 = parseInt(prompt("Podaj pierwszą liczbę:"));
+        var liczba2 = parseInt(prompt("Podaj drugą liczbę:"));
+
+        if (liczba1 === liczba2) {
+            confirm("Podane liczby są równe. Brak obliczeń.");
+        } else {
+            var start = Math.min(liczba1, liczba2);
+            var end = Math.max(liczba1, liczba2);
+            var output = "";
+
+            if (liczba1 < liczba2) {
+                for (var i = start; i <= end; i++) {
+                    if (i % 2 !== 0) {
+                        output += "<span style='color: green;'>" + i + "</span><br>";
+                    }
+                }
+            } else {
+                for (var i = end; i >= start; i--) {
+                    if (i % 2 !== 0) {
+                        output += "<span style='color: blue; font-size: 50%;'>" + i + "</span><br>";
+                    }
+                }
+            }
+
+            document.write(output);
+        }
+    </script>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_czerczon()"/>
+
+</body>
+</html>

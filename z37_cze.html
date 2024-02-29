@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 37</title>
+</head>
+<body>
+    <script>
+function okno_zamknij_czerczon() 
+{
+window.close()
+}
+        // Sprawdzanie, czy liczba należy do przedziału matematycznego
+        function sprawdzPrzedzialMatematyka(x) {
+            return (x >= -2) && (x < 3);
+        }
+
+        // Sprawdzanie, czy liczba należy do przedziału informatycznego
+        function sprawdzPrzedzialInformatyka(x) {
+            return (x <= -4) || (x > 5);
+        }
+
+        // Testowanie i wyświetlanie wyników
+        document.write("<p>Przedział liczbowy matematyka:</p>");
+        document.write("<p>x ∈ [-2, 3) \t x in(- ∞,-4> cup (5, ∞)</p>");
+        document.write("<p>Przedział liczbowy informatyka:</p>");
+        document.write("<p>x ≤ -4 && x > 5  /t (x<=-4)||((x>5)</p>");
+        document.write("<br>");
+
+        document.write("Czy liczba 0 należy do przedziału matematycznego? " + sprawdzPrzedzialMatematyka(0) + "<br>");
+        document.write("Czy liczba 4 należy do przedziału matematycznego? " + sprawdzPrzedzialMatematyka(4) + "<br>");
+        document.write("Czy liczba -5 należy do przedziału informatycznego? " + sprawdzPrzedzialInformatyka(-5) + "<br>");
+        document.write("Czy liczba 6 należy do przedziału informatycznego? " + sprawdzPrzedzialInformatyka(6) + "<br>");
+
+    </script>
+
+<input type="button" value="zamknij okno" onclick="okno_zamknij_czerczon()"/>
+
+</body>
+</html>
