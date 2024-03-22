@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formularz</title>
+    <script>
+        function okno_zamknij_czerczon() {
+            window.close()
+        }
+        function sprawdz(formularz) {
+            for (i = 0; i < formularz.length; i++) {
+                var pole = formularz.elements[i];
+                if (!pole.disabled && !pole.readonly && (pole.type == "text" || pole.type == "password" ||
+                    pole.tagName.toLowerCase() == "textarea") && pole.value == "") {
+                    alert("Proszę wypełnić wszystkie pola!");
+                    return false;
+                }
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form action="mailto:adres e-mail?subject=temat" method="post" enctype="text/plain"
+        onsubmit="if (sprawdz(this)) return true; return false">
+        <div>
+            <input type="text" name="a" placeholder="Wpisz tekst"><br>
+            <input type="password" name="b" placeholder="Wpisz hasło"><br>
+            <textarea name="c" cols="20" rows="10" placeholder="Wpisz tekst"></textarea><br>
+            <input type="submit" value="OK">
+        </div>
+    </form>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_czerczon()" />
+
+</body>
+</html>

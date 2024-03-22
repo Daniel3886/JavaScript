@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>Przykład - Pokaż formularz</title>
+    <script language="JavaScript">
+        function okno_zamknij_czerczon() {
+            window.close();
+        }
+
+        function f(w, i) {
+            var pola = ['imie', 'nazwisko', 'kod_pocztowy'];
+            var dane = w.elements;
+            for (i = 0; i < pola.length; i++) {
+                if (dane[pola[i]].value == "") {
+                    dane[pola[i]].focus();
+                    alert("Musisz wypełnić wymagane pola");
+                    return false;
+                }
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return f(this)">
+        <input type="text" name="imie" placeholder="Imię"><br>
+        <input type="text" name="nazwisko" placeholder="Nazwisko"><br>
+        <input type="text" name="kod_pocztowy" placeholder="Kod pocztowy"><br>
+        <input type="submit" value="Wyślij">
+    </form>
+
+    <input type="button" value="Zamknij okno" onclick="okno_zamknij_czerczon()" />
+</body>
+</html>

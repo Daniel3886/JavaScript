@@ -1,0 +1,107 @@
+<html>
+<head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #EBD76F;
+        color: #333;
+    }
+
+    #container {
+        width: 80%;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    input[type="text"] {
+        width: 100px;
+    }
+
+    select {
+        width: 150px;
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    #wynik {
+        font-size: 18px;
+        font-weight: bold;
+    }
+</style>
+<script type="text/javascript">
+    function okno_zamknij_czerczon() {
+        window.close()
+    }
+
+
+    function obliczanie(form) {
+        var promile = 0;
+        var piwo = parseFloat(form.piwo.value);
+        var wino = parseFloat(form.wino.value);
+        var wodka = parseFloat(form.wodka.value);
+        var godziny = parseInt(form.godziny.value);
+        var plec = form.plec.value;
+        var waga = parseFloat(form.waga.value);
+        var zoladek = form.zoladek.value;
+
+        var iloscAlkoholu = (piwo / 500 * 14) + (wino / 150 * 11) + (wodka / 50 * 21);
+        var masaAlkoholu = iloscAlkoholu * 0.789;
+        var korektaMasy = (plec === "mezczyzna") ? 0.68 : 0.55;
+        var promile = (masaAlkoholu / (waga * korektaMasy) - (0.15 * godziny)).toFixed(2);
+
+        if (promile < 0) {
+            document.getElementById("wynik").innerHTML = "0.06 promila. MOŻESZ jechać!";
+        } else {
+            document.getElementById("wynik").innerHTML = promile + " promila. MOŻESZ jechać!";
+        }
+    }
+</script>
+</head>
+
+<body>
+<div id="container">
+    <h1>AlkoCAR</h1>
+    <form name="formularz">
+        <label>Spożyłem <input type="text" name="piwo" /> ml piwa (1 kufel = 500ml)</label><br><br>
+        <label>Spożyłem <input type="text" name="wino" /> ml wina (1 lampka = 150ml)</label><br><br>
+        <label>Spożyłem <input type="text" name="wodka" /> ml wódki (1 kieliszek = 50ml)</label><br><br>
+        <label>Ile godzin temu spożywałeś trunki? <input type="text" name="godziny" /></label><br><br>
+        <label>Określ swoją płeć:</label>
+        <select name="plec">
+            <option value="mezczyzna">Mężczyzna</option>
+            <option value="kobieta">Kobieta</option>
+        </select><br><br>
+        <label>Określ swoją wagę (w kg) <input type="text" name="waga" /></label><br><br>
+        <label>Czy piłeś na pusty czy pełny żołądek?</label>
+        <select name="zoladek">
+            <option value="pusty">Pusty</option>
+            <option value="sredni">Średni</option>
+            <option value="pelny">Pełny</option>
+        </select><br><br>
+        <button type="button" onClick="obliczanie(this.form)">Oblicz</button><br><br>
+    </form>
+    <div id="wynik"></div>
+    <br><br>
+    <button type="button" onclick="okno_zamknij_czerczon()">Zamknij okno</button>
+</div>
+</body>
+
+</html>
