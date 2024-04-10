@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Klasyczna galeria zdjęć</title>
+  <script language="JavaScript">
+         function okno_zamknij_czerczon() {
+            window.close()
+        }
+
+  </script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .thumbnails {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .thumbnails img {
+      width: 100px;
+      height: auto;
+      cursor: pointer;
+    }
+
+    .main-image {
+      margin-top: 20px;
+      max-width: 70%; 
+    }
+
+    .main-image img {
+      max-width: 100px;
+      height: auto;
+    }
+
+    .main {
+      margin-top: 10px;
+      background-color: rgb(226, 226, 128);
+      background-size: cover;
+      padding: 20px 40px; 
+      border: none;
+      color: rgb(52, 55, 236);
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="gallery">
+    <div class="thumbnails">
+      <img src="c:\Users\uczen\AppData\Local\Packages\microsoft.microsoftedge_8wekyb3d8bbwe\AC\#!001\MicrosoftEdge\Cache\B5UGTRGG\R[1].jpg" alt="Thumbnail 1">
+      <img src="c:\Users\uczen\AppData\Local\Packages\microsoft.microsoftedge_8wekyb3d8bbwe\AC\#!001\MicrosoftEdge\Cache\5F1D80QT\galesnjak[1].jpg" alt="Thumbnail 3">
+      <img src="c:\Users\uczen\AppData\Local\Packages\microsoft.microsoftedge_8wekyb3d8bbwe\AC\#!001\MicrosoftEdge\Cache\5F1D80QT\Wyspy-Zielonego-Przylądka-kiedy-jechać[1].jpg" alt="Thumbnail 5">
+      <img src="c:\Users\uczen\AppData\Local\Packages\microsoft.microsoftedge_8wekyb3d8bbwe\AC\#!001\MicrosoftEdge\Cache\B5UGTRGG\Kiedy-jechać-na-Wyspy-Zielonego-Przylądka[1].jpg" alt="Thumbnail 2">
+      <img src="c:\Users\uczen\AppData\Local\Packages\microsoft.microsoftedge_8wekyb3d8bbwe\AC\#!001\MicrosoftEdge\Cache\JQQVPJ25\R[3].jpg" alt="Thumbnail 4">
+      <img src="c:\Users\uczen\AppData\Local\Packages\microsoft.microsoftedge_8wekyb3d8bbwe\AC\#!001\MicrosoftEdge\Cache\N4R86URF\seychelles-rca-honeymoons-cr-getty[1].jpg" alt="Thumbnail 6">
+    </div>
+    <div class="main-image">
+      <input class="main" type="button" value="zamknij okno" onclick="okno_zamknij_czerczon()" />
+</div>
+  </div>
+</body>
+</html>
